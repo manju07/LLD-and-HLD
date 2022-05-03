@@ -1,4 +1,4 @@
-package com.spring.core;
+package com.lld.and.hld.lldandhld.practice;
 
 import java.util.ArrayList;
 import java.util.Arrays;

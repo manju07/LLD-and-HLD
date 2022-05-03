@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "designpattern/structural",
+        "lld-and-hld/src/main/java/com/lld/and/hld/lldandhld/designpattern/structural"
+    ]
+}

@@ -1,3 +1,5 @@
+package com.lld.and.hld.lldandhld.designpattern.creational;
+
 public class PrototypePattern {
 
     static class Prototype {
