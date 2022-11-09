@@ -1,9 +1,6 @@
 package com.lld.and.hld.lldandhld.practice;
 
-import java.security.cert.PKIXRevocationChecker.Option;
 import java.util.Optional;
-
-import javax.xml.crypto.Data;
 
 public class OptionalPractice {
     public static void main(String[] args) {
