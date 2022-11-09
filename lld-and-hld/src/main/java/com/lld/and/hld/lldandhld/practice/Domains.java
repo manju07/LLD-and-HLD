@@ -46,14 +46,9 @@ public class Domains {
         for (int i = 0; i < list.size(); i++) {
             String data[] = list.get(i).split(",");
             int count = Integer.parseInt(data[0]);
-            String domain = data[1];
+            String domain = data[1]; // sports.yahoo.com
 
-            if (!resultMap.containsKey(domain))
-                resultMap.put(domain, count);
-            else {
-                int tempCount = resultMap.get(domain);
-                resultMap.put(domain, tempCount + count);
-            }
+            resultMap.compute(domain, (key, value) -> count + (value != null ? value : 0));
 
             while (true) {
                 int index = domain.indexOf(".");
@@ -61,13 +56,8 @@ public class Domains {
                 if (index == -1)
                     break;
 
-                domain = domain.substring(index + 1); // sports.yahoo.com
-                if (!resultMap.containsKey(domain))
-                    resultMap.put(domain, count);
-                else {
-                    int tempCount = resultMap.get(domain);
-                    resultMap.put(domain, tempCount + count);
-                }
+                domain = domain.substring(index + 1); // yahoo.com, com
+                resultMap.compute(domain, (key, value) -> count + (value != null ? value : 0));
             }
         }
         return resultMap;
@@ -90,5 +80,4 @@ public class Domains {
         for (Map.Entry<String, Integer> data : resultMap.entrySet())
             System.out.println(data.getKey() + "=" + data.getValue());
     }
-
 }
