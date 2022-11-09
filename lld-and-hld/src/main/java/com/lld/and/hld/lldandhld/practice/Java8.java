@@ -134,7 +134,7 @@ public class Java8 {
     }
 
     private static void functionalInterfaceMethod() {
-        FunctionalInterface fi = (str) -> Integer.parseInt(str);
+        CustomFunctionalInterface fi = (str) -> Integer.parseInt(str);
         int data = fi.test("123");
         System.out.println(fi.test1(data));
     }
