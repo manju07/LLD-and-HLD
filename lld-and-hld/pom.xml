@@ -35,6 +35,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>7.0.1-ccs</version>
+  		</dependency>
+		
+		  <dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-avro-serializer</artifactId>
+			<!-- For Confluent Platform 7.0.1 -->
+			<version>7.0.1</version>
+		  </dependency>
+		
 	</dependencies>
 
 	<build>
@@ -53,4 +66,14 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+
+		<repository>
+		  <id>confluent</id>
+		  <url>https://packages.confluent.io/maven/</url>
+		</repository>
+	  
+		<!-- further repository entries here -->
+	  
+	  </repositories>
 </project>
