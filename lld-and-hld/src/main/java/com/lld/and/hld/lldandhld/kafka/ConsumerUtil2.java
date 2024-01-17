@@ -24,7 +24,7 @@ public class ConsumerUtil2 {
         Properties config = new Properties();
         try {
             config.put("client.id", InetAddress.getLocalHost().getHostName());
-            config.put("bootstrap.servers", "localhost:29092,localhost:39092");
+            config.put("bootstrap.servers", "localhost:29092,localhost:39092,localhost:49092");
             config.put("group.id", "topic1Group");
             config.put("auto.offset.reset.config", "earliest");
             config.put("key.deserializer", StringDeserializer.class);

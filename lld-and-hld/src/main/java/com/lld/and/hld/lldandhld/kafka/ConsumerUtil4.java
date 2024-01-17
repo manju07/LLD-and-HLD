@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
  * Consumer
  */
 @Slf4j
-public class ConsumerUtil {
+public class ConsumerUtil4 {
 
     private KafkaConsumer<String, Student> createConsumer() throws UnknownHostException {
         Properties config = new Properties();
@@ -37,7 +37,7 @@ public class ConsumerUtil {
     }
 
     public static void main(String[] args) {
-        ConsumerUtil consumerUtil = new ConsumerUtil();
+        ConsumerUtil4 consumerUtil = new ConsumerUtil4();
         try {
             final KafkaConsumer<String, Student> consumer = consumerUtil.createConsumer();
             consumer.subscribe(Arrays.asList("topic1"));

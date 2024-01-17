@@ -27,7 +27,7 @@ public class ProducerUtil {
         Properties config = new Properties();
         try {
             config.put("client.id", InetAddress.getLocalHost().getHostName());
-            config.put("bootstrap.servers", "localhost:29092,localhost:39092");
+            config.put("bootstrap.servers", "localhost:29092,localhost:39092,localhost:49092");
             config.put("acks", "all");
             config.put("key.serializer", StringSerializer.class);
             config.put("value.serializer", StudentValueSeializerAndDeserializer.class);
