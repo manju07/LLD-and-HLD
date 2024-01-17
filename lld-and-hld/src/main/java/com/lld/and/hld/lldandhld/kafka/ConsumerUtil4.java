@@ -48,6 +48,7 @@ public class ConsumerUtil4 {
 
             // Thread thread2 = new Thread(() -> {
                 // pollRecords(consumer);
+                
             // });
 
             // thread1.start();
