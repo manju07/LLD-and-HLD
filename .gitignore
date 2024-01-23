@@ -1,0 +1,6 @@
+/bin/
+.vscode
+.idea
+.project
+lld-and-hld/.mvn
+lld-and-hld/.settings
