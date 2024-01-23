@@ -11,6 +11,8 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Java8 {
     public static void main(String[] args) {
@@ -42,7 +44,7 @@ public class Java8 {
 
         // optionalExample();
 
-        // sortInParallelStreamOrder();
+        sortInParallelStreamAndStreamOrder();
         // sortInSequentialOrder();
         // mapExample();
         List<List<Integer>> listOfList = Arrays.asList(Arrays.asList(1, 2), Arrays.asList(2, 4),
@@ -55,7 +57,7 @@ public class Java8 {
             }
             System.out.println();
         }
-        Arrays.sort(data, (a,b) -> a[0] - b[0]);
+        Arrays.sort(data, (a, b) -> a[0] - b[0]);
         System.out.println("After sort");
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[i].length; j++) {
@@ -63,11 +65,18 @@ public class Java8 {
             }
             System.out.println();
         }
+        int[] array = IntStream.range(0, 10).map(d -> d * 2).toArray();
     }
 
+    // private static long[][] collectionIntToLong(List<List<Integer>> listOfList) {
+    // return listOfList.stream().map(list ->
+    // list.stream().flatMapToLong(Long::longValue).toArray()).toArray(long[][]::new);
+    // }
+
     public static int[][] collectionToPrimitive(List<List<Integer>> listOfList) {
-        Collections.sort(listOfList, (a, b) ->  b.get(0)- a.get(0));
-        return  listOfList.stream().map(list -> list.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
+        Collections.sort(listOfList, (a, b) -> b.get(0) - a.get(0));
+        return listOfList.stream().map(list -> list.stream().mapToInt(data -> data.intValue()).toArray())
+                .toArray(int[][]::new);
     }
 
     public static void mapExample() {
@@ -100,7 +109,7 @@ public class Java8 {
     private static void sumOfNumbers() {
         List<Integer> tempList = Arrays.asList(1, 2, 1, 2, 1, 3, 4);
         System.out.println("sum of numbers = "
-                + tempList.stream().sorted((d1, d2) -> d2.compareTo(d1)).reduce((d1, d2) -> d1 + d2).get());
+                + tempList.stream().reduce((d1, d2) -> d1 + d2).get());
     }
 
     private static void twoDListSort() {
@@ -152,7 +161,7 @@ public class Java8 {
         System.out.println("Total Duration in Milli = " + TimeUnit.NANOSECONDS.toMillis(endTime - startTime));
     }
 
-    public static void sortInParallelStreamOrder() {
+    public static void sortInParallelStreamAndStreamOrder() {
         System.out.println();
         System.out.println("Java8.sortInParallelStreamOrder()");
         List<String> list = new ArrayList<>();
@@ -162,6 +171,13 @@ public class Java8 {
         long startTime = System.nanoTime();
         long count = list.parallelStream().sorted((data1, data2) -> data2.compareTo(data1)).count();
         long endTime = System.nanoTime();
+
+        System.out.println("Total Duration in Milli = " + TimeUnit.NANOSECONDS.toMillis(endTime - startTime));
+
+        startTime = System.nanoTime();
+        count = list.stream().sorted((data1, data2) -> data2.compareTo(data1)).count();
+        endTime = System.nanoTime();
+
         System.out.println("Total Duration in Milli = " + TimeUnit.NANOSECONDS.toMillis(endTime - startTime));
     }
 
