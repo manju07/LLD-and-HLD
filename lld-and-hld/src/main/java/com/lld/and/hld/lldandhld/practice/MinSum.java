@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.designpattern;
+package com.lld.and.hld.lldandhld.practice;
 
 public class MinSum {
     public static int findMinSumPath(int[][] matrix, int n, int m) {

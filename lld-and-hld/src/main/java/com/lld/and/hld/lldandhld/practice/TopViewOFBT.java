@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.designpattern;
+package com.lld.and.hld.lldandhld.practice;
 
 import java.util.HashMap;
 import java.util.LinkedList;

@@ -5,7 +5,7 @@
 // / \  / \
 // 4 5 6   7
 
-package com.lld.and.hld.lldandhld.designpattern;
+package com.lld.and.hld.lldandhld.practice;
 
 class Node {
     int data;

@@ -16,7 +16,7 @@
 //  B = 1
 //  output: [1,1,1,1]
 
-package com.lld.and.hld.lldandhld.designpattern;
+package com.lld.and.hld.lldandhld.practice;
 
 import java.util.ArrayList;
 import java.util.Arrays;

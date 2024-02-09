@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.designpattern;
+package com.lld.and.hld.lldandhld.practice;
 
 /**
  * it contains only 0's and 1's
