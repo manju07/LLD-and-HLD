@@ -6,7 +6,7 @@ import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import com.lld.and.hld.lldandhld.generic.GenericClass;
+import com.lld.and.hld.lldandhld.practice.generic.GenericClass;
 
 /**
  * MapWithStream

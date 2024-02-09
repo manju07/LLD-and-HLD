@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.kafka.model;
+package com.lld.and.hld.lldandhld.practice.kafka.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

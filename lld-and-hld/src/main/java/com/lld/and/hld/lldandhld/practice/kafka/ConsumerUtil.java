@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.kafka;
+package com.lld.and.hld.lldandhld.practice.kafka;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -10,7 +10,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
-import com.lld.and.hld.lldandhld.kafka.model.Student;
+import com.lld.and.hld.lldandhld.practice.kafka.model.Student;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
  * Consumer
  */
 @Slf4j
-public class ConsumerUtil3 {
+public class ConsumerUtil {
 
     private KafkaConsumer<String, Student> createConsumer() throws UnknownHostException {
         Properties config = new Properties();
@@ -37,7 +37,7 @@ public class ConsumerUtil3 {
     }
 
     public static void main(String[] args) {
-        ConsumerUtil3 consumerUtil = new ConsumerUtil3();
+        ConsumerUtil consumerUtil = new ConsumerUtil();
         try {
             final KafkaConsumer<String, Student> consumer = consumerUtil.createConsumer();
             consumer.subscribe(Arrays.asList("topic1"));

@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.kafka;
+package com.lld.and.hld.lldandhld.practice.kafka;
 
 import java.util.Map;
 
@@ -7,7 +7,7 @@ import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lld.and.hld.lldandhld.kafka.model.Student;
+import com.lld.and.hld.lldandhld.practice.kafka.model.Student;
 
 /**
  * ValueClass

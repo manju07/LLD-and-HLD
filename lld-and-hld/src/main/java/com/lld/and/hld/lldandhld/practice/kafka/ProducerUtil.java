@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.kafka;
+package com.lld.and.hld.lldandhld.practice.kafka;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -13,7 +13,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-import com.lld.and.hld.lldandhld.kafka.model.Student;
+import com.lld.and.hld.lldandhld.practice.kafka.model.Student;
 
 import lombok.extern.slf4j.Slf4j;
 

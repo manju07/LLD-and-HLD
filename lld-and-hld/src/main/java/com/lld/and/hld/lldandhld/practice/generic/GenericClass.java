@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.generic;
+package com.lld.and.hld.lldandhld.practice.generic;
 
 import java.util.List;
 import java.util.Map;
