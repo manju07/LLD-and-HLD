@@ -44,13 +44,17 @@ public class RateLimit {
 
             Timestamp firstCalled = customerData.firstTimeCalled;
             long totalDuration = currentTimestamp.getTime() - firstCalled.getTime();
+
             // 20S, 1-5, 6-10, 11-15, 15-20, 20-24
             if (totalDuration > DURATION_IN_MILLI_SECONDS) {
+
                 customerData.firstTimeCalled = currentTimestamp;
                 customerData.totalRequestCount = 1;
                 return true;
-            } else if (customerData.totalRequestCount >= MAX_REQUESTS) return false;
-            else {
+
+            } else if (customerData.totalRequestCount >= MAX_REQUESTS) {
+                return false;
+            } else {
                 customerData.totalRequestCount++;
                 customerData.lastTimeCalled = currentTimestamp;
             }
@@ -64,17 +68,17 @@ public class RateLimit {
 
     public static void main(String[] args) {
         try {
-            System.out.println(rateLimit(1)); 
-            System.out.println(rateLimit(1)); 
-            System.out.println(rateLimit(1)); 
-            System.out.println(rateLimit(1)); 
+            System.out.println(rateLimit(1));
+            System.out.println(rateLimit(1));
+            System.out.println(rateLimit(1));
+            System.out.println(rateLimit(1));
             Thread.sleep(200);
             // Thread.sleep(50);
-            System.out.println(rateLimit(1)); 
-            System.out.println(rateLimit(1)); 
+            System.out.println(rateLimit(1));
+            System.out.println(rateLimit(1));
         } catch (Exception e) {
             System.err.println(e);
-            //TODO: handle exception
+            // TODO: handle exception
         }
     }
 }
