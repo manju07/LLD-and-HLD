@@ -3,10 +3,10 @@ package com.lld.and.hld.lldandhld.practice.kafka;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Properties;
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-import org.apache.commons.lang3.RandomUtils;
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -47,7 +47,7 @@ public class ProducerUtil {
 
             while (true) {
                 final ProducerRecord<String, Student> record = new ProducerRecord<>("topic1",
-                        String.valueOf(id), new Student(id, "Manju", new RandomUtils().nextInt(60, 101)));
+                        String.valueOf(id), new Student(id, "Manju", new Random().nextInt(100)));
                         
                 // Sync way to send events
                 // sendEventInSync(producer, record);
