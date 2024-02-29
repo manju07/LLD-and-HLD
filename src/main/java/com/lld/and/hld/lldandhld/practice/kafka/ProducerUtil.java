@@ -62,6 +62,7 @@ public class ProducerUtil {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private static void sendEventAsync(KafkaProducer producer, final ProducerRecord<String, Student> record) {
         producer.send(record, new Callback() {
             public void onCompletion(RecordMetadata metadata, Exception e) {

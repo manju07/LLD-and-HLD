@@ -1,3 +1,5 @@
+.vscode/launch.json
+.DS_Store
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -73,3 +75,4 @@ build/
 
 .mvn
 .settings
+../.vscode

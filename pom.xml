@@ -8,10 +8,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lld.and.hld</groupId>
-	<artifactId>lld-and-hld</artifactId>
+	<artifactId>LLD-AND-HLD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>lld-and-hld</name>
-	<description>Demo project for Spring Boot</description>
+	<name>LLD-AND-HLD</name>
+	<description>LLD and HLD Practice maven project</description>
 	<properties>
 		<java.version>8</java.version>
 	</properties>
