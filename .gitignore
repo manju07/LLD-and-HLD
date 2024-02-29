@@ -75,4 +75,4 @@ build/
 
 .mvn
 .settings
-.java-version
+../.vscode
