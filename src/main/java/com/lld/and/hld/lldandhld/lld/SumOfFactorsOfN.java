@@ -37,11 +37,10 @@ public class SumOfFactorsOfN {
             if (n % i == 0) {
 
                 set.add(i);
+                sum += i;
 
-                if ((n / i) == i) {
-                    sum += i;
-                } else {
-                    sum += (i + (n / i));
+                if ((n / i) != i) {
+                    sum += (n / i);
                     set.add(n / i);
                 }
             }
@@ -54,7 +53,7 @@ public class SumOfFactorsOfN {
     public static void main(String[] args) {
         System.out.println(sumOfFactorsOfN(0));
         System.out.println(sumOfFactorsOfN(1));
-        System.out.println(sumOfFactorsOfN(10));
+        System.out.println(sumOfFactorsOfN(100));
         System.out.println(sumOfFactorsOfN(9));
         System.out.println(sumOfFactorsOfN(100));
         System.out.println(sumOfFactorsOfN(200));
