@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.designpattern;
+package com.lld.and.hld.lldandhld.designpattern.structural;
 
 import lombok.Getter;
 import lombok.Setter;
