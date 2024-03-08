@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.practice;
+package com.lld.and.hld.lldandhld.lld;
 
 import java.util.Arrays;
 import java.util.HashMap;
