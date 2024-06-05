@@ -7,15 +7,15 @@
 
 package com.lld.and.hld.lldandhld.practice;
 
-class Node {
-    int data;
-    Node leftNode, rightNode;
-
-    Node(int data) {
-        this.data = data;
-        leftNode = rightNode = null;
-    }
-}
+//class Node {
+//    int data;
+//    Node left, right;
+//
+//    Node(int data) {
+//        this.data = data;
+//        left = right = null;
+//    }
+//}
 
 
 
@@ -29,15 +29,15 @@ public class LeftSubtree {
             return;
         if (isLeftNode)
             System.out.println(root.data + " ");
-        if (root.leftNode != null)
-            printLeftSubtree(root.leftNode, true);
-        if (root.rightNode != null)
-            printLeftSubtree(root.rightNode, false);
+        if (root.left != null)
+            printLeftSubtree(root.left, true);
+        if (root.right != null)
+            printLeftSubtree(root.right, false);
     }
 
     public static void main(String[] args) {
         Node root = new Node(1);
-        printLeftSubtree(root.leftNode, true);
-        printLeftSubtree(root.rightNode, false);
+        printLeftSubtree(root.left, true);
+        printLeftSubtree(root.right, false);
     }
 }

@@ -2,7 +2,7 @@ USD --> INR
 
 1M - 10L
 10M - 100L --> 1CR
-50M - 500L ---> 4CR
+50M - 500L ---> 5CR
 100M - 1000L --> 10CR
 
 
@@ -13,7 +13,7 @@ USD --> INR
 
 Formula's:
 
--  Lakhs Conversion
+- Lakhs Conversion
     - 10M*10 -> X Lakhs
         Examples:
             - 10M * 10 = 100 Lakhs(1 Crore) 

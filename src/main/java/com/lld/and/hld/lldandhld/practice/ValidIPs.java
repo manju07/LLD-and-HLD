@@ -6,7 +6,7 @@ import java.util.List;
 public class ValidIPs {
 
     /**
-     * “1230456” -
+     * 1230456 -
      * 1.2.3.0
      * 1.2.30.4
      * 1.2.30.45

@@ -15,7 +15,7 @@ Functional Requirements:
     - Provide a custom id to choose for tiny URL.
 
 Non-Funcational Requirements:
-    - Highly availabl, if not so, redirection start failing
+    - Highly available, if not so, redirection start failing
     - Redirection should happen with minimal latency
     - Tiny URL's shouldn't be guessable.
     

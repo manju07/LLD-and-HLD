@@ -13,14 +13,6 @@ import java.util.Queue;
  * //   12
  */
 
-class Node {
-    int data;
-    Node left, right;
-
-    Node(int data) {
-        this.left = this.right = null;
-    }
-}
 
 public class RightSideViewOfBinaryTree {
 

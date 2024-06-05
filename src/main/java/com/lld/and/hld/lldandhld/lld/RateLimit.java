@@ -4,8 +4,8 @@
 * 		Should work in concurrent situations.
 
 
-* 		Should be able to smooth bursts of requests. For example if we have defined TPS as 5, and all five requests arrive at the same moment, it should be able to line them up at fixed intervals, i.e. execute each of them at an interval of 200ms. It requires an internal timing circuit.
-* 		If we have a TPS of 5, and in one of the 1 second slots, we use only three tokens for the next second, we should be capable of providing 5+2 = 7 tokens as a bonus. But at the rate of 1/7 (142.28ms) per token. The bonus should not carry forward to the next slot.
+* 		Should be able to smooth bursts of requests. For example if we have defined TPS as 5, and all five requests arrive at the same moment, it should be able to line them up at fixed intervals, i.e. execute each of them at an interval of 200ms. It requires an internal timing circuit.
+* 		If we have a TPS o 5, and in one of the 1 second slots, we use only three tokens for the next second, we should be capable of providing 5+2 = 7 tokens as a bonus. But at the rate of 1/7 (142.28ms) per token. The bonus should not carry forward to the next slot.
 **/
 /**
 1s - 5 Request
