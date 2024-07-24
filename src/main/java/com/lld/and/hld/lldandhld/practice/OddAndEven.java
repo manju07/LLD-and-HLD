@@ -23,28 +23,20 @@ public class OddAndEven {
         while (currentData <= this.data) {
             System.out.println(Thread.currentThread().getName() + " " + currentData);
             currentData++;
-            if (currentData == this.data) {
-                Thread.interrupted();
-            }
             notify();
-            while (currentData % 2 == 0 && currentData != this.data) {
-                wait();
-            }
+            wait();
         }
+        System.exit(0);
     }
 
     synchronized void printEven() throws InterruptedException {
         while (currentData <= this.data) {
             System.out.println(Thread.currentThread().getName() + " " + currentData);
             currentData++;
-            if (currentData == this.data) {
-                Thread.interrupted();
-            }
             notify();
-            while (currentData % 2 == 1) {
-                wait();
-            }
+            wait();
         }
+        System.exit(0);
     }
 
     public static void main(String[] args) throws InterruptedException {
