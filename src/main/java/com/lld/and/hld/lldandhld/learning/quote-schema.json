@@ -1,0 +1,890 @@
+// Pricing and Quote Schema
+
+- data: {}
+    - monetizationCommerceQuote: {}
+        - quote: {}
+            - pricingSummar: {}
+                - taxSummary: {}
+                    - taxSummaryBreakups: []
+            - nextCyclePricingSummary: []
+                - taxSummary: {}
+                    - taxSummaryBreakups: []
+            - billingAccountInformation: {}
+                - address: {}
+                - organizationInformation: {}
+                - personInformation: {}
+            - lineItems: []
+                - components: []
+                    - offer: {}
+                        - pricingSummary: {}
+                        - nextCyclePricingInformation: []
+                    - products: []
+                        - chargeInformation: []
+                            - pricingInformation: {}
+                                - discountDetails: {}
+                            - nextCyclePricingInformation: []
+
+{
+    "data": {
+        "monetizationCommerceQuote": {
+            "clientMutationId": "08ef0f47-d70d-408e-bd34-b600ea0559f2",
+            "status": {
+                "statusCode": 0,
+                "message": null
+            },
+            "quote": {
+                "id": "b5cbced1-8cfa-11ef-80c4-c513d6f68c06",
+                "externalReferenceId": null,
+                "transactionType": "PURCHASE",
+                "taxCalculationResult": {
+                    "status": "CALCULATED"
+                },
+                "pricingSummary": {
+                    "currency": "USD",
+                    "overriddenListPrice": null,
+                    "itemListPrice": 8000,
+                    "itemStrikeThroughPrice": 8000,
+                    "netItemPrice": 8000,
+                    "itemDiscount": 0,
+                    "itemTax": 400,
+                    "netShippingPrice": 0,
+                    "shippingDiscount": null,
+                    "shippingTax": null,
+                    "totalTax": 400,
+                    "totalDiscount": 0,
+                    "totalTaxExemptAmount": null,
+                    "total": 8400,
+                    "isProrated": false,
+                    "effectiveAt": null,
+                    "taxSummary": {
+                        "taxSummaryBreakups": [
+                            {
+                                "taxedFor": "ITEM",
+                                "amount": "400",
+                                "taxTypeSummary": [
+                                    {
+                                        "taxType": "Sales and Use Tax",
+                                        "amount": 400,
+                                        "taxationTypeSummary": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "discountSummary": null
+                },
+                "nextCyclePricingSummary": [
+                    {
+                        "currency": "USD",
+                        "overriddenListPrice": null,
+                        "itemListPrice": 8000,
+                        "itemStrikeThroughPrice": 8000,
+                        "netItemPrice": 8000,
+                        "itemDiscount": 0,
+                        "itemTax": null,
+                        "netShippingPrice": 0,
+                        "shippingDiscount": null,
+                        "shippingTax": null,
+                        "totalTax": null,
+                        "totalDiscount": 0,
+                        "totalTaxExemptAmount": null,
+                        "total": 8000,
+                        "isProrated": false,
+                        "effectiveAt": "2025-10-17T07:00:00.000Z",
+                        "taxSummary": {
+                            "taxSummaryBreakups": []
+                        },
+                        "discountSummary": null
+                    }
+                ],
+                "billingAccountInformation": {
+                    "accountId": null,
+                    "locale": null,
+                    "address": {
+                        "address1": "2285 Trout St",
+                        "address2": null,
+                        "address3": null,
+                        "locality": "Juneau",
+                        "region": "AK",
+                        "postalCode": "99801",
+                        "postalExt": null,
+                        "subRegion": null,
+                        "country": "USA"
+                    },
+                    "personInformation": null,
+                    "organizationInformation": null,
+                    "taxIdentifierInformation": null
+                },
+                "lineItems": [
+                    {
+                        "id": "b5cbced1-8cfa-11ef-80c4-c513d6f68c06#0",
+                        "externalReferenceLineItemId": null,
+                        "actionType": "PURCHASE",
+                        "sequenceNumber": 0,
+                        "components": [
+                            {
+                                "id": "b5cbced1-8cfa-11ef-80c4-c513d6f68c06#0#0",
+                                "externalReferenceComponentId": null,
+                                "operationType": "ADD",
+                                "quantity": 1,
+                                "offer": {
+                                    "offerId": "21101683",
+                                    "displayName": "Intuit Enterprise Suite Standard",
+                                    "level": "BASE",
+                                    "isBundle": false,
+                                    "type": "Paid",
+                                    "periodUnit": null,
+                                    "periodDuration": 0,
+                                    "pricingSummary": {
+                                        "currency": "USD",
+                                        "overriddenListPrice": null,
+                                        "itemListPrice": 8000,
+                                        "itemStrikeThroughPrice": 8000,
+                                        "netItemPrice": 8000,
+                                        "itemDiscount": 0,
+                                        "itemTax": 400,
+                                        "netShippingPrice": 0,
+                                        "shippingDiscount": 0,
+                                        "shippingTax": null,
+                                        "totalTax": 400,
+                                        "totalDiscount": 0,
+                                        "totalTaxExemptAmount": null,
+                                        "total": 8400,
+                                        "isProrated": false,
+                                        "effectiveAt": null,
+                                        "taxSummary": {
+                                            "taxSummaryBreakups": [
+                                                {
+                                                    "taxedFor": "ITEM",
+                                                    "amount": "400",
+                                                    "taxTypeSummary": [
+                                                        {
+                                                            "taxType": "Sales and Use Tax",
+                                                            "amount": 400,
+                                                            "taxationTypeSummary": null
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "discountSummary": null
+                                    },
+                                    "nextCyclePricingSummary": [
+                                        {
+                                            "currency": "USD",
+                                            "overriddenListPrice": null,
+                                            "itemListPrice": 8000,
+                                            "itemStrikeThroughPrice": 8000,
+                                            "netItemPrice": 8000,
+                                            "itemDiscount": 0,
+                                            "itemTax": null,
+                                            "netShippingPrice": 0,
+                                            "shippingDiscount": 0,
+                                            "shippingTax": null,
+                                            "totalTax": null,
+                                            "totalDiscount": 0,
+                                            "totalTaxExemptAmount": null,
+                                            "total": 8000,
+                                            "isProrated": false,
+                                            "effectiveAt": "2025-10-17T07:00:00.000Z",
+                                            "taxSummary": null,
+                                            "discountSummary": null
+                                        }
+                                    ]
+                                },
+                                "products": [
+                                    {
+                                        "productId": "b5cbced1-8cfa-11ef-80c4-c513d6f68c06#0#0#0",
+                                        "productCode": "IES",
+                                        "productName": "Intuit Enterprise Suite",
+                                        "quantity": 1,
+                                        "chargeInformation": [
+                                            {
+                                                "chargeId": "261078",
+                                                "displayName": "IES Recurring",
+                                                "type": "RECURRING_PER_RESOURCE",
+                                                "frequency": "Monthly",
+                                                "isTierPriced": true,
+                                                "description": "IES Standard US oBill super users",
+                                                "tierType": "STEP",
+                                                "quantity": 0,
+                                                "resource": {
+                                                    "code": "ASU",
+                                                    "currentCount": 0,
+                                                    "limit": null,
+                                                    "multiplier": null
+                                                },
+                                                "resources": null,
+                                                "tiers": [
+                                                    {
+                                                        "stepMin": 1,
+                                                        "stepMax": 99999,
+                                                        "currentCount": 0,
+                                                        "description": null,
+                                                        "tierResources": null,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 100,
+                                                            "strikeThroughPrice": 100,
+                                                            "netPrice": 100,
+                                                            "discount": 0,
+                                                            "itemTax": null,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": null,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 100,
+                                                                "strikeThroughPrice": 100,
+                                                                "netPrice": 100,
+                                                                "discount": 0,
+                                                                "itemTax": null,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": null,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-11-17T08:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 0,
+                                                    "strikeThroughPrice": 0,
+                                                    "netPrice": 0,
+                                                    "discount": 0,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 0,
+                                                    "total": 0,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": null
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 100,
+                                                        "strikeThroughPrice": 100,
+                                                        "netPrice": 100,
+                                                        "discount": 0,
+                                                        "itemTax": null,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": null,
+                                                        "totalDiscount": 0,
+                                                        "total": 100,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-11-17T08:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": null
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "chargeId": "261073",
+                                                "displayName": "IES Recurring",
+                                                "type": "RECURRING_PER_RESOURCE",
+                                                "frequency": "Monthly",
+                                                "isTierPriced": true,
+                                                "description": "IES Standard US oBill dimensions ",
+                                                "tierType": "STEP",
+                                                "quantity": 0,
+                                                "resource": {
+                                                    "code": "ACL",
+                                                    "currentCount": 0,
+                                                    "limit": null,
+                                                    "multiplier": null
+                                                },
+                                                "resources": null,
+                                                "tiers": [
+                                                    {
+                                                        "stepMin": 1,
+                                                        "stepMax": 99999,
+                                                        "currentCount": 0,
+                                                        "description": null,
+                                                        "tierResources": null,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 42,
+                                                            "strikeThroughPrice": 42,
+                                                            "netPrice": 42,
+                                                            "discount": 0,
+                                                            "itemTax": null,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": null,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 42,
+                                                                "strikeThroughPrice": 42,
+                                                                "netPrice": 42,
+                                                                "discount": 0,
+                                                                "itemTax": null,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": null,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-11-17T08:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 0,
+                                                    "strikeThroughPrice": 0,
+                                                    "netPrice": 0,
+                                                    "discount": 0,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 0,
+                                                    "total": 0,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": null
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 42,
+                                                        "strikeThroughPrice": 42,
+                                                        "netPrice": 42,
+                                                        "discount": 0,
+                                                        "itemTax": null,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": null,
+                                                        "totalDiscount": 0,
+                                                        "total": 42,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-11-17T08:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": null
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "chargeId": "261077",
+                                                "displayName": "Bank Payment Faster ACH",
+                                                "type": "USAGE",
+                                                "frequency": null,
+                                                "isTierPriced": true,
+                                                "description": "Bank Payment Faster ACH",
+                                                "tierType": null,
+                                                "quantity": 0,
+                                                "resource": null,
+                                                "resources": null,
+                                                "tiers": [
+                                                    {
+                                                        "stepMin": 1,
+                                                        "stepMax": 5,
+                                                        "currentCount": 0,
+                                                        "description": null,
+                                                        "tierResources": null,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 10,
+                                                            "strikeThroughPrice": 10,
+                                                            "netPrice": 10,
+                                                            "discount": 0,
+                                                            "itemTax": null,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": null,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 10,
+                                                                "strikeThroughPrice": 10,
+                                                                "netPrice": 10,
+                                                                "discount": 0,
+                                                                "itemTax": null,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": null,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-10-17T07:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "stepMin": 6,
+                                                        "stepMax": 9999999,
+                                                        "currentCount": 0,
+                                                        "description": null,
+                                                        "tierResources": null,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 15,
+                                                            "strikeThroughPrice": 15,
+                                                            "netPrice": 15,
+                                                            "discount": 0,
+                                                            "itemTax": null,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": null,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 15,
+                                                                "strikeThroughPrice": 15,
+                                                                "netPrice": 15,
+                                                                "discount": 0,
+                                                                "itemTax": null,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": null,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-10-17T07:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 0,
+                                                    "strikeThroughPrice": 0,
+                                                    "netPrice": 0,
+                                                    "discount": 0,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 0,
+                                                    "total": 0,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": null
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 10,
+                                                        "strikeThroughPrice": 10,
+                                                        "netPrice": 10,
+                                                        "discount": 0,
+                                                        "itemTax": null,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": null,
+                                                        "totalDiscount": 0,
+                                                        "total": 10,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-10-17T07:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": null
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "chargeId": "261075",
+                                                "displayName": "Check",
+                                                "type": "USAGE",
+                                                "frequency": null,
+                                                "isTierPriced": false,
+                                                "description": "Check",
+                                                "tierType": null,
+                                                "quantity": 0,
+                                                "resource": null,
+                                                "resources": null,
+                                                "tiers": null,
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 0,
+                                                    "strikeThroughPrice": 0,
+                                                    "netPrice": 0,
+                                                    "discount": 0,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 0,
+                                                    "total": 0,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": null
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 10,
+                                                        "strikeThroughPrice": 10,
+                                                        "netPrice": 10,
+                                                        "discount": 0,
+                                                        "itemTax": null,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": null,
+                                                        "totalDiscount": 0,
+                                                        "total": 10,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-10-17T07:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": null
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "chargeId": "261076",
+                                                "displayName": "IES Recurring",
+                                                "type": "RECURRING",
+                                                "frequency": "Annual",
+                                                "isTierPriced": true,
+                                                "description": "IES Standard US Annual recurring",
+                                                "tierType": null,
+                                                "quantity": 1,
+                                                "resource": null,
+                                                "resources": [
+                                                    {
+                                                        "code": "ASU",
+                                                        "granted": true,
+                                                        "grant": {
+                                                            "grantedCount": 1
+                                                        }
+                                                    },
+                                                    {
+                                                        "code": "ACL",
+                                                        "granted": true,
+                                                        "grant": {
+                                                            "grantedCount": 4
+                                                        }
+                                                    },
+                                                    {
+                                                        "code": "AFM",
+                                                        "granted": true,
+                                                        "grant": {
+                                                            "grantedCount": 5
+                                                        }
+                                                    }
+                                                ],
+                                                "tiers": [
+                                                    {
+                                                        "stepMin": null,
+                                                        "stepMax": null,
+                                                        "currentCount": 0,
+                                                        "description": null,
+                                                        "tierResources": [
+                                                            {
+                                                                "code": "ASU",
+                                                                "grant": {
+                                                                    "grantedCount": 1
+                                                                },
+                                                                "multiplier": 1
+                                                            },
+                                                            {
+                                                                "code": "ACL",
+                                                                "grant": {
+                                                                    "grantedCount": 4
+                                                                },
+                                                                "multiplier": 1
+                                                            },
+                                                            {
+                                                                "code": "AFM",
+                                                                "grant": {
+                                                                    "grantedCount": 5
+                                                                },
+                                                                "multiplier": 1
+                                                            }
+                                                        ],
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 8000,
+                                                            "strikeThroughPrice": 8000,
+                                                            "netPrice": 0,
+                                                            "discount": 0,
+                                                            "itemTax": 0,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": 0,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 8000,
+                                                                "strikeThroughPrice": 8000,
+                                                                "netPrice": 0,
+                                                                "discount": 0,
+                                                                "itemTax": 0,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": 0,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": null,
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 8000,
+                                                    "strikeThroughPrice": 8000,
+                                                    "netPrice": 8000,
+                                                    "discount": 0,
+                                                    "itemTax": 400,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 400,
+                                                    "totalDiscount": 0,
+                                                    "total": 8400,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": {
+                                                        "taxDetailBreakups": [
+                                                            {
+                                                                "taxedFor": "ITEM",
+                                                                "taxType": "Sales and Use Tax",
+                                                                "amount": 400,
+                                                                "rate": 0.05,
+                                                                "rateType": "PERCENT",
+                                                                "exemptAmount": 0,
+                                                                "taxableAmount": 8000,
+                                                                "taxationTypeDetails": null
+                                                            }
+                                                        ]
+                                                    },
+                                                    "discountDetails": null
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 8000,
+                                                        "strikeThroughPrice": 8000,
+                                                        "netPrice": 8000,
+                                                        "discount": 0,
+                                                        "itemTax": null,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": null,
+                                                        "totalDiscount": 0,
+                                                        "total": 8000,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2025-10-17T07:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": null
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "chargeId": "261074",
+                                                "displayName": "IES Recurring",
+                                                "type": "RECURRING_PER_RESOURCE",
+                                                "frequency": "Monthly",
+                                                "isTierPriced": true,
+                                                "description": "IES Standard US oBill standard users",
+                                                "tierType": "STEP",
+                                                "quantity": 0,
+                                                "resource": {
+                                                    "code": "AFM",
+                                                    "currentCount": 0,
+                                                    "limit": null,
+                                                    "multiplier": null
+                                                },
+                                                "resources": null,
+                                                "tiers": [
+                                                    {
+                                                        "stepMin": 1,
+                                                        "stepMax": 99999,
+                                                        "currentCount": 0,
+                                                        "description": null,
+                                                        "tierResources": null,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 40,
+                                                            "strikeThroughPrice": 40,
+                                                            "netPrice": 40,
+                                                            "discount": 0,
+                                                            "itemTax": null,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": null,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 40,
+                                                                "strikeThroughPrice": 40,
+                                                                "netPrice": 40,
+                                                                "discount": 0,
+                                                                "itemTax": null,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": null,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-11-17T08:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 0,
+                                                    "strikeThroughPrice": 0,
+                                                    "netPrice": 0,
+                                                    "discount": 0,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 0,
+                                                    "total": 0,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": null
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 40,
+                                                        "strikeThroughPrice": 40,
+                                                        "netPrice": 40,
+                                                        "discount": 0,
+                                                        "itemTax": null,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": null,
+                                                        "totalDiscount": 0,
+                                                        "total": 40,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-11-17T08:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": null
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
+

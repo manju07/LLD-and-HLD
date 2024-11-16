@@ -1,0 +1,52 @@
+Pricing and Charging by Product catelog
+
+- Offer Level
+    - Base
+    - addOn
+    - feature
+
+- An Offer have
+    - N Products
+        - each product have
+            - featureSet
+                - feature
+                    - each feature has name and code 
+            - N charges
+                - may/may not have tiers
+                - each charge may/may not have discount
+                    - discount have valueType
+                - applied rates
+            - mapping "featureSet.code and charge[index].featureSetCode"
+    - transition
+        - fromOfferId to toOfferId
+    - addOnOfferIDs
+    - optionalFeatureOfferIDs
+    - pricingSegments
+
+
+ - Charging Model
+    - Recurring - Monthly/Yearly
+    - TRIAL
+    - FREE
+    - FREE FOR LIFE
+    - Recurring per resource
+    - Usage
+    - One time
+
+- Pricing Model
+    - FLAT
+    - Tiered
+        - Step
+        - Range
+        - Volume
+
+- Discounting Model
+    - Promotion - offer based discounts
+    - Voucher - Applied by customer
+    - Manual - by agent
+
+- Account
+  - order account
+  - billing
+  - service
+  - payee

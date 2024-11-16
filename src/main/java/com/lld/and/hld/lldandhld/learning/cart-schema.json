@@ -1,0 +1,951 @@
+// Cart schema
+
+- cart: {}
+    - lineItems: []
+        - components: []
+            - offer: {}
+                - pricingSummary: {}
+                    - discountSummary: {}
+                        - discountBreakups: []
+                - nextCyclePricingSummary: []
+            - products: []
+                - featureSetInformation: []
+                - chargeInformation: []
+                    - pricingInformation: {}
+                    - nextCyclePricingInformation: []
+
+    - pricingSummary: {}
+        - taxSummary: {}
+            - taxSummaryBreakups: []
+        - discountSummary: {}
+            - discountSummaryBreakups: []
+    - nextCyclePricingSummary: []
+    - source
+    - additionalAttributes
+    - externalReferenceInformation
+
+{
+    "data": {
+        "monetizationCommerceCart": {
+            "cart": {
+                "id": "4f46e9f3-cbba-429b-a0c8-08be841820fa",
+                "storeCode": "sfdc_org_direct",
+                "cartNamespace": "default",
+                "quoteType": "ESTIMATE",
+                "transactionType": "PURCHASE",
+                "legalEntity": null,
+                "isReadyToPlaceOrder": false,
+                "ownerType": "OPPORTUNITY",
+                "ownerId": "456789",
+                "status": "ACTIVE",
+                "countryOfSale": "USA",
+                "consents": null,
+                "lineItems": [
+                    {
+                        "id": "f457be3e-4afd-48f5-8b9a-117d68a638e1",
+                        "sequenceNumber": 0,
+                        "actionType": "PURCHASE",
+                        "isRemovable": true,
+                        "groupInformation": null,
+                        "components": [
+                            {
+                                "id": "e073c659-46be-4c7b-8e51-726452331276",
+                                "quantity": 1,
+                                "operationType": "ADD",
+                                "customization": null,
+                                "offer": {
+                                    "offerId": "20053392",
+                                    "displayName": "QuickBooks Online Essentials",
+                                    "level": "BASE",
+                                    "isBundle": false,
+                                    "type": "Paid",
+                                    "periodDuration": 0,
+                                    "periodUnit": null,
+                                    "pricingSummary": {
+                                        "currency": "USD",
+                                        "overriddenListPrice": null,
+                                        "itemListPrice": 65,
+                                        "itemStrikeThroughPrice": 65,
+                                        "netItemPrice": 32.5,
+                                        "itemDiscount": 32.5,
+                                        "itemTax": 0,
+                                        "netShippingPrice": 0,
+                                        "shippingDiscount": 0,
+                                        "shippingTax": null,
+                                        "totalTax": 0,
+                                        "totalDiscount": 32.5,
+                                        "totalTaxExemptAmount": null,
+                                        "total": 32.5,
+                                        "isProrated": false,
+                                        "effectiveAt": null,
+                                        "taxSummary": null,
+                                        "discountSummary": {
+                                            "discountSummaryBreakups": [
+                                                {
+                                                    "discountOn": "ITEM",
+                                                    "amount": 32.5,
+                                                    "promotionalDiscountSummary": {
+                                                        "amount": 32.5,
+                                                        "appliedPromotionsSummary": [
+                                                            {
+                                                                "type": "DEFAULT",
+                                                                "amount": 32.5,
+                                                                "code": null,
+                                                                "__typename": "MonetizationCommerce_AppliedPromotionsSummary"
+                                                            }
+                                                        ],
+                                                        "__typename": "MonetizationCommerce_PromotionalDiscountSummary"
+                                                    },
+                                                    "voucherDiscountSummary": null,
+                                                    "manualDiscountSummary": null,
+                                                    "__typename": "MonetizationCommerce_DiscountSummaryBreakup"
+                                                }
+                                            ],
+                                            "__typename": "MonetizationCommerce_DiscountSummary"
+                                        },
+                                        "__typename": "MonetizationCommerce_AggregatePricing"
+                                    },
+                                    "nextCyclePricingSummary": [
+                                        {
+                                            "currency": "USD",
+                                            "overriddenListPrice": null,
+                                            "itemListPrice": 65,
+                                            "itemStrikeThroughPrice": 65,
+                                            "netItemPrice": 32.5,
+                                            "itemDiscount": 32.5,
+                                            "itemTax": 0,
+                                            "netShippingPrice": 0,
+                                            "shippingDiscount": 0,
+                                            "shippingTax": null,
+                                            "totalTax": 0,
+                                            "totalDiscount": 32.5,
+                                            "totalTaxExemptAmount": null,
+                                            "total": 32.5,
+                                            "isProrated": false,
+                                            "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                            "taxSummary": null,
+                                            "discountSummary": {
+                                                "discountSummaryBreakups": [
+                                                    {
+                                                        "discountOn": "ITEM",
+                                                        "amount": 32.5,
+                                                        "promotionalDiscountSummary": {
+                                                            "amount": 32.5,
+                                                            "appliedPromotionsSummary": [
+                                                                {
+                                                                    "type": "DEFAULT",
+                                                                    "amount": 32.5,
+                                                                    "code": null,
+                                                                    "__typename": "MonetizationCommerce_AppliedPromotionsSummary"
+                                                                }
+                                                            ],
+                                                            "__typename": "MonetizationCommerce_PromotionalDiscountSummary"
+                                                        },
+                                                        "voucherDiscountSummary": null,
+                                                        "manualDiscountSummary": null,
+                                                        "__typename": "MonetizationCommerce_DiscountSummaryBreakup"
+                                                    }
+                                                ],
+                                                "__typename": "MonetizationCommerce_DiscountSummary"
+                                            },
+                                            "__typename": "MonetizationCommerce_AggregatePricing"
+                                        }
+                                    ],
+                                    "alternateIds": null,
+                                    "__typename": "MonetizationCommerce_CartOfferInformation"
+                                },
+                                "products": [
+                                    {
+                                        "productCode": "QBO",
+                                        "productName": "QuickBooks Online",
+                                        "quantity": 1,
+                                        "isShippable": false,
+                                        "alternateProductIds": null,
+                                        "featureSetInformation": {
+                                            "featureSets": [
+                                                {
+                                                    "code": "QBO_ESSENTIALS",
+                                                    "name": "QBO_ESSENTIALS",
+                                                    "id": null,
+                                                    "displayName": "QuickBooks Online Essentials",
+                                                    "features": null,
+                                                    "__typename": "MonetizationCommerce_CartFeatureSet"
+                                                }
+                                            ],
+                                            "__typename": "MonetizationCommerce_CartFeatureSetInformation"
+                                        },
+                                        "chargeInformation": [
+                                            {
+                                                "chargeId": null,
+                                                "displayName": "QuickBooks Online Essentials",
+                                                "type": "RECURRING",
+                                                "frequency": "Monthly",
+                                                "isTierPriced": false,
+                                                "description": "QuickBooks Online Essentials",
+                                                "tierType": null,
+                                                "quantity": 1,
+                                                "resource": null,
+                                                "tiers": null,
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 65,
+                                                    "strikeThroughPrice": 65,
+                                                    "netPrice": 32.5,
+                                                    "discount": 32.5,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 32.5,
+                                                    "total": 32.5,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": {
+                                                        "discountDetailBreakups": [
+                                                            {
+                                                                "discountOn": "ITEM",
+                                                                "amount": 32.5,
+                                                                "promotionDetails": {
+                                                                    "amount": 32.5,
+                                                                    "appliedPromotions": [
+                                                                        {
+                                                                            "type": "DEFAULT",
+                                                                            "amount": 32.5,
+                                                                            "code": null,
+                                                                            "discountId": "24053018",
+                                                                            "description": "QuickBooks Online 50 Percent Discount",
+                                                                            "valueType": "PERCENT",
+                                                                            "value": 50,
+                                                                            "frequency": "Monthly",
+                                                                            "startsAt": "2024-10-15T07:00:00.000Z",
+                                                                            "endsAt": "2025-01-15T07:00:00.000Z",
+                                                                            "__typename": "MonetizationCommerce_AppliedPromotion"
+                                                                        }
+                                                                    ],
+                                                                    "__typename": "MonetizationCommerce_PromotionDetails"
+                                                                },
+                                                                "voucherDiscounts": null,
+                                                                "manualDiscounts": null,
+                                                                "__typename": "MonetizationCommerce_DiscountDetailBreakups"
+                                                            }
+                                                        ],
+                                                        "__typename": "MonetizationCommerce_DiscountDetail"
+                                                    },
+                                                    "__typename": "MonetizationCommerce_DetailedPricing"
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 65,
+                                                        "strikeThroughPrice": 65,
+                                                        "netPrice": 32.5,
+                                                        "discount": 32.5,
+                                                        "itemTax": 0,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": 0,
+                                                        "totalDiscount": 32.5,
+                                                        "total": 32.5,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": {
+                                                            "discountDetailBreakups": [
+                                                                {
+                                                                    "discountOn": "ITEM",
+                                                                    "amount": 32.5,
+                                                                    "promotionDetails": {
+                                                                        "amount": 32.5,
+                                                                        "appliedPromotions": [
+                                                                            {
+                                                                                "type": "DEFAULT",
+                                                                                "amount": 32.5,
+                                                                                "code": null,
+                                                                                "discountId": "24053018",
+                                                                                "description": "QuickBooks Online 50 Percent Discount",
+                                                                                "valueType": "PERCENT",
+                                                                                "value": 50,
+                                                                                "frequency": "Monthly",
+                                                                                "startsAt": "2024-10-15T07:00:00.000Z",
+                                                                                "endsAt": "2025-01-15T07:00:00.000Z",
+                                                                                "__typename": "MonetizationCommerce_AppliedPromotion"
+                                                                            }
+                                                                        ],
+                                                                        "__typename": "MonetizationCommerce_PromotionDetails"
+                                                                    },
+                                                                    "voucherDiscounts": null,
+                                                                    "manualDiscounts": null,
+                                                                    "__typename": "MonetizationCommerce_DiscountDetailBreakups"
+                                                                }
+                                                            ],
+                                                            "__typename": "MonetizationCommerce_DiscountDetail"
+                                                        },
+                                                        "__typename": "MonetizationCommerce_DetailedPricing"
+                                                    }
+                                                ],
+                                                "__typename": "MonetizationCommerce_CartChargeInformation"
+                                            }
+                                        ],
+                                        "__typename": "MonetizationCommerce_CartProductInformation"
+                                    }
+                                ],
+                                "entitlementInformation": [],
+                                "consentMetaModel": null,
+                                "additionalAttributeGroups": null,
+                                "__typename": "MonetizationCommerce_CartLineItemComponent"
+                            }
+                        ],
+                        "__typename": "MonetizationCommerce_CartLineItem"
+                    },
+                    {
+                        "id": "e67147bb-e6fd-4f01-a5d2-491c63c9262c",
+                        "sequenceNumber": 0,
+                        "actionType": "PURCHASE",
+                        "isRemovable": true,
+                        "groupInformation": null,
+                        "components": [
+                            {
+                                "id": "97162c34-4f74-461d-b546-2866b6e8d3d7",
+                                "quantity": 1,
+                                "operationType": "ADD",
+                                "customization": null,
+                                "offer": {
+                                    "offerId": "20023673",
+                                    "displayName": "QuickBooks TSheets Premium",
+                                    "level": "BASE",
+                                    "isBundle": false,
+                                    "type": "Paid",
+                                    "periodDuration": 0,
+                                    "periodUnit": null,
+                                    "pricingSummary": {
+                                        "currency": "USD",
+                                        "overriddenListPrice": null,
+                                        "itemListPrice": 20,
+                                        "itemStrikeThroughPrice": 20,
+                                        "netItemPrice": 10,
+                                        "itemDiscount": 10,
+                                        "itemTax": 0,
+                                        "netShippingPrice": 0,
+                                        "shippingDiscount": 0,
+                                        "shippingTax": null,
+                                        "totalTax": 0,
+                                        "totalDiscount": 10,
+                                        "totalTaxExemptAmount": null,
+                                        "total": 10,
+                                        "isProrated": false,
+                                        "effectiveAt": null,
+                                        "taxSummary": null,
+                                        "discountSummary": {
+                                            "discountSummaryBreakups": [
+                                                {
+                                                    "discountOn": "ITEM",
+                                                    "amount": 10,
+                                                    "promotionalDiscountSummary": {
+                                                        "amount": 10,
+                                                        "appliedPromotionsSummary": [
+                                                            {
+                                                                "type": "DEFAULT",
+                                                                "amount": 10,
+                                                                "code": null,
+                                                                "__typename": "MonetizationCommerce_AppliedPromotionsSummary"
+                                                            }
+                                                        ],
+                                                        "__typename": "MonetizationCommerce_PromotionalDiscountSummary"
+                                                    },
+                                                    "voucherDiscountSummary": null,
+                                                    "manualDiscountSummary": null,
+                                                    "__typename": "MonetizationCommerce_DiscountSummaryBreakup"
+                                                }
+                                            ],
+                                            "__typename": "MonetizationCommerce_DiscountSummary"
+                                        },
+                                        "__typename": "MonetizationCommerce_AggregatePricing"
+                                    },
+                                    "nextCyclePricingSummary": [
+                                        {
+                                            "currency": "USD",
+                                            "overriddenListPrice": null,
+                                            "itemListPrice": 20,
+                                            "itemStrikeThroughPrice": 20,
+                                            "netItemPrice": 10,
+                                            "itemDiscount": 10,
+                                            "itemTax": 0,
+                                            "netShippingPrice": 0,
+                                            "shippingDiscount": 0,
+                                            "shippingTax": null,
+                                            "totalTax": 0,
+                                            "totalDiscount": 10,
+                                            "totalTaxExemptAmount": null,
+                                            "total": 10,
+                                            "isProrated": false,
+                                            "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                            "taxSummary": null,
+                                            "discountSummary": {
+                                                "discountSummaryBreakups": [
+                                                    {
+                                                        "discountOn": "ITEM",
+                                                        "amount": 10,
+                                                        "promotionalDiscountSummary": {
+                                                            "amount": 10,
+                                                            "appliedPromotionsSummary": [
+                                                                {
+                                                                    "type": "DEFAULT",
+                                                                    "amount": 10,
+                                                                    "code": null,
+                                                                    "__typename": "MonetizationCommerce_AppliedPromotionsSummary"
+                                                                }
+                                                            ],
+                                                            "__typename": "MonetizationCommerce_PromotionalDiscountSummary"
+                                                        },
+                                                        "voucherDiscountSummary": null,
+                                                        "manualDiscountSummary": null,
+                                                        "__typename": "MonetizationCommerce_DiscountSummaryBreakup"
+                                                    }
+                                                ],
+                                                "__typename": "MonetizationCommerce_DiscountSummary"
+                                            },
+                                            "__typename": "MonetizationCommerce_AggregatePricing"
+                                        }
+                                    ],
+                                    "alternateIds": null,
+                                    "__typename": "MonetizationCommerce_CartOfferInformation"
+                                },
+                                "products": [
+                                    {
+                                        "productCode": "TSHEETS",
+                                        "productName": "QuickBooks TSheets",
+                                        "quantity": 1,
+                                        "isShippable": false,
+                                        "alternateProductIds": null,
+                                        "featureSetInformation": {
+                                            "featureSets": [
+                                                {
+                                                    "code": "QB_TSHEETS_PREMIUM",
+                                                    "name": "QB_TSHEETS_PREMIUM",
+                                                    "id": null,
+                                                    "displayName": "QuickBooks TSheets Premium",
+                                                    "features": null,
+                                                    "__typename": "MonetizationCommerce_CartFeatureSet"
+                                                }
+                                            ],
+                                            "__typename": "MonetizationCommerce_CartFeatureSetInformation"
+                                        },
+                                        "chargeInformation": [
+                                            {
+                                                "chargeId": null,
+                                                "displayName": "QuickBooks Time Premium",
+                                                "type": "RECURRING",
+                                                "frequency": "Monthly",
+                                                "isTierPriced": false,
+                                                "description": "QuickBooks Time Premium",
+                                                "tierType": null,
+                                                "quantity": 1,
+                                                "resource": null,
+                                                "tiers": null,
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 20,
+                                                    "strikeThroughPrice": 20,
+                                                    "netPrice": 10,
+                                                    "discount": 10,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 10,
+                                                    "total": 10,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": {
+                                                        "discountDetailBreakups": [
+                                                            {
+                                                                "discountOn": "ITEM",
+                                                                "amount": 10,
+                                                                "promotionDetails": {
+                                                                    "amount": 10,
+                                                                    "appliedPromotions": [
+                                                                        {
+                                                                            "type": "DEFAULT",
+                                                                            "amount": 10,
+                                                                            "code": null,
+                                                                            "discountId": "24003818",
+                                                                            "description": "QuickBooks TSheets 50 Percent Discount",
+                                                                            "valueType": "PERCENT",
+                                                                            "value": 50,
+                                                                            "frequency": "Monthly",
+                                                                            "startsAt": "2024-10-15T07:00:00.000Z",
+                                                                            "endsAt": "2025-01-15T07:00:00.000Z",
+                                                                            "__typename": "MonetizationCommerce_AppliedPromotion"
+                                                                        }
+                                                                    ],
+                                                                    "__typename": "MonetizationCommerce_PromotionDetails"
+                                                                },
+                                                                "voucherDiscounts": null,
+                                                                "manualDiscounts": null,
+                                                                "__typename": "MonetizationCommerce_DiscountDetailBreakups"
+                                                            }
+                                                        ],
+                                                        "__typename": "MonetizationCommerce_DiscountDetail"
+                                                    },
+                                                    "__typename": "MonetizationCommerce_DetailedPricing"
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 20,
+                                                        "strikeThroughPrice": 20,
+                                                        "netPrice": 10,
+                                                        "discount": 10,
+                                                        "itemTax": 0,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": 0,
+                                                        "totalDiscount": 10,
+                                                        "total": 10,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": {
+                                                            "discountDetailBreakups": [
+                                                                {
+                                                                    "discountOn": "ITEM",
+                                                                    "amount": 10,
+                                                                    "promotionDetails": {
+                                                                        "amount": 10,
+                                                                        "appliedPromotions": [
+                                                                            {
+                                                                                "type": "DEFAULT",
+                                                                                "amount": 10,
+                                                                                "code": null,
+                                                                                "discountId": "24003818",
+                                                                                "description": "QuickBooks TSheets 50 Percent Discount",
+                                                                                "valueType": "PERCENT",
+                                                                                "value": 50,
+                                                                                "frequency": "Monthly",
+                                                                                "startsAt": "2024-10-15T07:00:00.000Z",
+                                                                                "endsAt": "2025-01-15T07:00:00.000Z",
+                                                                                "__typename": "MonetizationCommerce_AppliedPromotion"
+                                                                            }
+                                                                        ],
+                                                                        "__typename": "MonetizationCommerce_PromotionDetails"
+                                                                    },
+                                                                    "voucherDiscounts": null,
+                                                                    "manualDiscounts": null,
+                                                                    "__typename": "MonetizationCommerce_DiscountDetailBreakups"
+                                                                }
+                                                            ],
+                                                            "__typename": "MonetizationCommerce_DiscountDetail"
+                                                        },
+                                                        "__typename": "MonetizationCommerce_DetailedPricing"
+                                                    }
+                                                ],
+                                                "__typename": "MonetizationCommerce_CartChargeInformation"
+                                            },
+                                            {
+                                                "chargeId": null,
+                                                "displayName": "QuickBooks Time Premium Per-User Fee for 1 User",
+                                                "type": "RECURRING_PER_RESOURCE",
+                                                "frequency": "Monthly",
+                                                "isTierPriced": true,
+                                                "description": "QuickBooks Time Premium Per-User Fee for 1 User",
+                                                "tierType": "STEP",
+                                                "quantity": 0,
+                                                "resource": {
+                                                    "code": "NAW",
+                                                    "countOrValue": null,
+                                                    "currentCount": 0,
+                                                    "limit": null,
+                                                    "name": "Active Worker",
+                                                    "multiplier": null,
+                                                    "__typename": "MonetizationCommerce_CartChargeResourceInformation"
+                                                },
+                                                "tiers": [
+                                                    {
+                                                        "stepMin": 101,
+                                                        "stepMax": 99999,
+                                                        "description": null,
+                                                        "currentCount": 0,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 4,
+                                                            "strikeThroughPrice": 4,
+                                                            "netPrice": 4,
+                                                            "discount": 0,
+                                                            "itemTax": 0,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": 0,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null,
+                                                            "__typename": "MonetizationCommerce_DetailedPricing"
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 4,
+                                                                "strikeThroughPrice": 4,
+                                                                "netPrice": 4,
+                                                                "discount": 0,
+                                                                "itemTax": 0,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": 0,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null,
+                                                                "__typename": "MonetizationCommerce_DetailedPricing"
+                                                            }
+                                                        ],
+                                                        "__typename": "MonetizationCommerce_CartChargeTierInformation"
+                                                    },
+                                                    {
+                                                        "stepMin": 51,
+                                                        "stepMax": 100,
+                                                        "description": null,
+                                                        "currentCount": 0,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 6,
+                                                            "strikeThroughPrice": 6,
+                                                            "netPrice": 6,
+                                                            "discount": 0,
+                                                            "itemTax": 0,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": 0,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null,
+                                                            "__typename": "MonetizationCommerce_DetailedPricing"
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 6,
+                                                                "strikeThroughPrice": 6,
+                                                                "netPrice": 6,
+                                                                "discount": 0,
+                                                                "itemTax": 0,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": 0,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null,
+                                                                "__typename": "MonetizationCommerce_DetailedPricing"
+                                                            }
+                                                        ],
+                                                        "__typename": "MonetizationCommerce_CartChargeTierInformation"
+                                                    },
+                                                    {
+                                                        "stepMin": 1,
+                                                        "stepMax": 50,
+                                                        "description": null,
+                                                        "currentCount": 0,
+                                                        "pricingInformation": {
+                                                            "currency": "USD",
+                                                            "listPrice": 8,
+                                                            "strikeThroughPrice": 8,
+                                                            "netPrice": 8,
+                                                            "discount": 0,
+                                                            "itemTax": 0,
+                                                            "netShippingPrice": 0,
+                                                            "shippingDiscount": 0,
+                                                            "shippingTax": null,
+                                                            "totalTax": 0,
+                                                            "totalDiscount": 0,
+                                                            "total": 0,
+                                                            "isProrated": null,
+                                                            "effectiveAt": null,
+                                                            "unitPricing": null,
+                                                            "taxDetails": null,
+                                                            "discountDetails": null,
+                                                            "__typename": "MonetizationCommerce_DetailedPricing"
+                                                        },
+                                                        "nextCyclePricingInformation": [
+                                                            {
+                                                                "currency": "USD",
+                                                                "listPrice": 8,
+                                                                "strikeThroughPrice": 8,
+                                                                "netPrice": 8,
+                                                                "discount": 0,
+                                                                "itemTax": 0,
+                                                                "netShippingPrice": 0,
+                                                                "shippingDiscount": 0,
+                                                                "shippingTax": null,
+                                                                "totalTax": 0,
+                                                                "totalDiscount": 0,
+                                                                "total": 0,
+                                                                "isProrated": null,
+                                                                "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                                                "unitPricing": null,
+                                                                "taxDetails": null,
+                                                                "discountDetails": null,
+                                                                "__typename": "MonetizationCommerce_DetailedPricing"
+                                                            }
+                                                        ],
+                                                        "__typename": "MonetizationCommerce_CartChargeTierInformation"
+                                                    }
+                                                ],
+                                                "pricingInformation": {
+                                                    "currency": "USD",
+                                                    "listPrice": 0,
+                                                    "strikeThroughPrice": 0,
+                                                    "netPrice": 0,
+                                                    "discount": 0,
+                                                    "itemTax": 0,
+                                                    "netShippingPrice": 0,
+                                                    "shippingDiscount": 0,
+                                                    "shippingTax": null,
+                                                    "totalTax": 0,
+                                                    "totalDiscount": 0,
+                                                    "total": 0,
+                                                    "isProrated": false,
+                                                    "effectiveAt": null,
+                                                    "unitPricing": null,
+                                                    "taxDetails": null,
+                                                    "discountDetails": null,
+                                                    "__typename": "MonetizationCommerce_DetailedPricing"
+                                                },
+                                                "nextCyclePricingInformation": [
+                                                    {
+                                                        "currency": "USD",
+                                                        "listPrice": 0,
+                                                        "strikeThroughPrice": 0,
+                                                        "netPrice": 0,
+                                                        "discount": 0,
+                                                        "itemTax": 0,
+                                                        "netShippingPrice": 0,
+                                                        "shippingDiscount": 0,
+                                                        "shippingTax": null,
+                                                        "totalTax": 0,
+                                                        "totalDiscount": 0,
+                                                        "total": 0,
+                                                        "isProrated": false,
+                                                        "effectiveAt": "2024-11-15T07:00:00.000Z",
+                                                        "unitPricing": null,
+                                                        "taxDetails": null,
+                                                        "discountDetails": null,
+                                                        "__typename": "MonetizationCommerce_DetailedPricing"
+                                                    }
+                                                ],
+                                                "__typename": "MonetizationCommerce_CartChargeInformation"
+                                            }
+                                        ],
+                                        "__typename": "MonetizationCommerce_CartProductInformation"
+                                    }
+                                ],
+                                "entitlementInformation": [],
+                                "consentMetaModel": null,
+                                "additionalAttributeGroups": null,
+                                "__typename": "MonetizationCommerce_CartLineItemComponent"
+                            }
+                        ],
+                        "__typename": "MonetizationCommerce_CartLineItem"
+                    }
+                ],
+                "billingAccountInformation": null,
+                "serviceAccountInformation": null,
+                "shippingInformation": null,
+                "accountInformation": null,
+                "pricingSummary": {
+                    "currency": "USD",
+                    "overriddenListPrice": null,
+                    "itemListPrice": 85,
+                    "itemStrikeThroughPrice": 85,
+                    "netItemPrice": 42.5,
+                    "itemDiscount": 42.5,
+                    "itemTax": 0,
+                    "netShippingPrice": 0,
+                    "shippingDiscount": null,
+                    "shippingTax": null,
+                    "totalTax": 0,
+                    "totalDiscount": 42.5,
+                    "totalTaxExemptAmount": null,
+                    "total": 42.5,
+                    "isProrated": false,
+                    "effectiveAt": null,
+                    "taxSummary": {
+                        "taxSummaryBreakups": [],
+                        "__typename": "MonetizationCommerce_TaxSummary"
+                    },
+                    "discountSummary": {
+                        "discountSummaryBreakups": [
+                            {
+                                "discountOn": "ITEM",
+                                "amount": 42.5,
+                                "promotionalDiscountSummary": {
+                                    "amount": 42.5,
+                                    "appliedPromotionsSummary": [
+                                        {
+                                            "type": "DEFAULT",
+                                            "amount": 42.5,
+                                            "code": null,
+                                            "__typename": "MonetizationCommerce_AppliedPromotionsSummary"
+                                        }
+                                    ],
+                                    "__typename": "MonetizationCommerce_PromotionalDiscountSummary"
+                                },
+                                "voucherDiscountSummary": null,
+                                "manualDiscountSummary": null,
+                                "__typename": "MonetizationCommerce_DiscountSummaryBreakup"
+                            }
+                        ],
+                        "__typename": "MonetizationCommerce_DiscountSummary"
+                    },
+                    "__typename": "MonetizationCommerce_AggregatePricing"
+                },
+                "nextCyclePricingSummary": [
+                    {
+                        "currency": "USD",
+                        "overriddenListPrice": null,
+                        "itemListPrice": 85,
+                        "itemStrikeThroughPrice": 85,
+                        "netItemPrice": 42.5,
+                        "itemDiscount": 42.5,
+                        "itemTax": 0,
+                        "netShippingPrice": 0,
+                        "shippingDiscount": null,
+                        "shippingTax": null,
+                        "totalTax": 0,
+                        "totalDiscount": 42.5,
+                        "totalTaxExemptAmount": null,
+                        "total": 42.5,
+                        "isProrated": false,
+                        "effectiveAt": "2024-11-15T07:00:00.000Z",
+                        "taxSummary": {
+                            "taxSummaryBreakups": [],
+                            "__typename": "MonetizationCommerce_TaxSummary"
+                        },
+                        "discountSummary": {
+                            "discountSummaryBreakups": [
+                                {
+                                    "discountOn": "ITEM",
+                                    "amount": 42.5,
+                                    "promotionalDiscountSummary": {
+                                        "amount": 42.5,
+                                        "appliedPromotionsSummary": [
+                                            {
+                                                "type": "DEFAULT",
+                                                "amount": 42.5,
+                                                "code": null,
+                                                "__typename": "MonetizationCommerce_AppliedPromotionsSummary"
+                                            }
+                                        ],
+                                        "__typename": "MonetizationCommerce_PromotionalDiscountSummary"
+                                    },
+                                    "voucherDiscountSummary": null,
+                                    "manualDiscountSummary": null,
+                                    "__typename": "MonetizationCommerce_DiscountSummaryBreakup"
+                                }
+                            ],
+                            "__typename": "MonetizationCommerce_DiscountSummary"
+                        },
+                        "__typename": "MonetizationCommerce_AggregatePricing"
+                    }
+                ],
+                "voucherInformation": null,
+                "promotionInformation": null,
+                "manualDiscountInformation": null,
+                "additionalAttributes": [
+                    {
+                        "key": "TBT",
+                        "value": "TBT205_AWS",
+                        "__typename": "MonetizationCommerce_Attribute"
+                    }
+                ],
+                "source": {
+                    "applicationType": "WEB",
+                    "channel": "AGENT",
+                    "actor": "AGENT",
+                    "experienceCode": "sfdc_org_direct",
+                    "assetAlias": "Intuit.shopping.cart.cartui",
+                    "storeCode": "sfdc_org_direct",
+                    "__typename": "MonetizationCommerce_Source"
+                },
+                "externalReferenceInformation": {
+                    "externalReferenceId": null,
+                    "additionalAttributes": [
+                        {
+                            "key": "opportunityNumber",
+                            "value": "456789",
+                            "__typename": "MonetizationCommerce_Attribute"
+                        },
+                        {
+                            "key": "agentId",
+                            "value": "9411823585658463",
+                            "__typename": "MonetizationCommerce_Attribute"
+                        }
+                    ],
+                    "__typename": "MonetizationCommerce_CartExternalReferenceInformation"
+                },
+                "isReadyToCheckout": true,
+                "billingProfileInformation": null,
+                "taxCalculationResult": {
+                    "status": "NOT_APPLICABLE",
+                    "message": null,
+                    "code": null,
+                    "__typename": "MonetizationCommerce_CartTaxCalculationResult"
+                },
+                "metadata": {
+                    "createdAt": "2024-10-15T10:47:45.086Z",
+                    "updatedAt": "2024-10-16T05:36:44.400Z",
+                    "createdBy": null,
+                    "__typename": "MonetizationCommerce_Metadata"
+                },
+                "metaModel": {
+                    "payment": {
+                        "capture": "REQUIRED",
+                        "__typename": "MonetizationCommerce_CartPaymentMetaModel"
+                    },
+                    "billingAddress": {
+                        "capture": "REQUIRED",
+                        "mdrLevel": "TAXABLE",
+                        "__typename": "MonetizationCommerce_CartBillingAddressMetaModel"
+                    },
+                    "consents": null,
+                    "requiredProducts": [],
+                    "relatedAccount": {
+                        "capture": "NOT_REQUIRED",
+                        "__typename": "MonetizationCommerce_RelatedAccountInfoMetaModel"
+                    },
+                    "__typename": "MonetizationCommerce_CartMetaModel"
+                },
+                "__typename": "MonetizationCommerce_ShoppingCart"
+            },
+            "validationResults": null,
+            "__typename": "MonetizationCommerce_GetCartResponse"
+        }
+    }
+}

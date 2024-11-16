@@ -1,0 +1,119 @@
+- offers
+
+    - product: []
+        - featureSet: {}
+            - feature: []
+            - featureSets: []
+            - feature: []
+        - optionalFeatures: []
+        - exclusionProductCodes: []
+        - charge: []
+                - tiers: []
+                - discount: []
+                - appliedRates: []
+                    - prices: []
+                        - price: {}
+                        - discounts: []
+    - transition:[]
+    - addOnOfferIDs: [String]
+    - optionalFeatureOfferIDs: [String]
+    - productExclusions: {}
+    - pricingSegments: []
+
+- cart
+
+    - cart: {}
+        - lineItems: []
+            - components: []
+                - offer: {}
+                    - pricingSummary: {}
+                        - discountSummary: {}
+                            - discountBreakups: []
+                    - nextCyclePricingSummary: []
+                - products: []
+                    - featureSetInformation: {}
+                    - featureSets: []
+                        - features: []
+                    - chargeInformation: []
+                        - tiers: []
+                        - pricingInformation: {}
+                            - discountDetails: {}
+                                - discountDetailsBreakups: []
+                        - nextCyclePricingInformation: []
+
+        - pricingSummary: {}
+            - taxSummary: {}
+                - taxSummaryBreakups: []
+            - discountSummary: {}
+                - discountSummaryBreakups: []
+        - nextCyclePricingSummary: []
+        - source: {}
+        - additionalAttributes: []
+        - externalReferenceInformation: {}
+
+- pricing and quote
+    - data: {}
+        - monetizationCommerceQuote: {}
+            - quote: {}
+                - lineItems: []
+                    - components: []
+                        - offer: {}
+                            - pricingSummary: {}
+                            - nextCyclePricingSummary: []
+                        - products: []
+                            - chargeInformation: []
+                                - pricingInformation: {}
+                                    - discountDetails: {}
+                                - nextCyclePricingInformation: []
+
+                - pricingSummary: {}
+                    - taxSummary: {}
+                        - taxSummaryBreakups: []
+                - nextCyclePricingSummary: []
+                    - taxSummary: {}
+                        - taxSummaryBreakups: []
+                - billingAccountInformation: {}
+                    - address: {}
+                    - organizationInformation: {}
+                    - personInformation: {}
+
+- order
+    - data: {}
+        - monetizationCommerceOrderByOrderNumber: {}
+            - orderQuote: {}
+                - pricingSummary: {}
+                - nextCyclePricingSummary: []
+                - lineItems: []
+                    - components: []
+                        - offer: {}
+                            - pricingSummary: {}
+                            - nextCyclePricingSummary:[]
+                        - products: []
+                            - chargeInformation: []
+                                - pricingInformation: {}
+                                    - discountDetails: {}
+                                - nextCyclePricingInformation: []
+            - billingProfileInformation: {} 
+                - paymentInformation: []
+                    - intuitWallet: {}
+                    - paymentMethod: {}
+                        - attributes: []
+            - billingAccountInformation: {}
+                - address: {}
+                - organizationInformation: {}
+                - personInformation: {}
+                    - emails: []
+                    - name: {}
+                    - phoneNumbers:[]
+            - orderAccountInformation: {}
+                - address: {}
+                - organizationInformation: {}
+                - personInformation: {}
+                    - emails: []
+                    - name: {}
+                    - phoneNumbers:[]
+            - lineItems: []
+                - components: []
+                    - offer: {}
+                    - featureSetInformation:{}
+                        - featureSets:[]

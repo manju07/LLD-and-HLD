@@ -1,0 +1,879 @@
+// Offer schema - Product catelog
+
+- product: []
+    - featureSet: []
+        - feature: []
+    - optionalFeatures: []
+    - exclusionProductCodes: []
+    - charge: []
+        - discount: []
+        - appliedRates: []
+            - prices: []
+                - price: {}
+                - discounts: []
+- transition:[]
+- addOnOfferIDs: [String]
+- optionalFeatureOfferIDs: [String]
+- productExclusions: {}
+- pricingSegments: []
+
+{
+    "offerID": "20025241",
+    "name": "QBO ADV Payroll Premium US Monthly Paid Small Biz Direct 15 Percent 12 Months 200 USD Bundle Offer",
+    "description": "QBO ADV Payroll Premium US Monthly Paid Small Biz Direct 15 Percent 12 Months 200 USD Bundle Offer",
+    "displayName": "QuickBooks Online Advanced + Payroll Premium",
+    "currency": "USD",
+    "totalPrice": 275,
+    "totalDiscount": 41.25,
+    "totalPriceAfterDiscount": 233.75,
+    "region": "US",
+    "country": [
+        "US"
+    ],
+    "trialUnit": null,
+    "trialDuration": null,
+    "type": "Paid",
+    "level": "BASE",
+    "customerSegment": "SMALL_BUSINESS",
+    "extendedCustomerSegment": "ANY",
+    "salesChannel": "DIRECT",
+    "extendedSalesChannel": "ANY",
+    "isListPriceOffer": "N",
+    "isBundle": "Y",
+    "isTargeted": "N",
+    "telesalesApplicability": "ALLOW",
+    "agentApplicabilityType": "SALES,CARE",
+    "billingPlatform": "INTUIT_OBILL",
+    "isConversionOffer": null,
+    "periodUnit": null,
+    "periodDuration": null,
+    "codeRequired": "NONE",
+    "offerPriority": 8,
+    "pricingCategory": "Everyday Low Price",
+    "testIndicator": null,
+    "effectiveStartDate": "2022-05-04T00:00:00-0700",
+    "effectiveEndDate": null,
+    "status": "Active",
+    "partnerNames": [],
+    "product": [
+        {
+            "code": "QBO",
+            "name": "QuickBooks Online",
+            "description": "QuickBooks Online",
+            "dependentOnProductCode": null,
+            "grantOfferingType": "Intuit.sbe.salsa.default",
+            "licensingSystem": "OBILL",
+            "exclusionProductCodes": [],
+            "wholesaleSupport": "Y",
+            "featureSet": {
+                "code": "QBO_ADVANCED",
+                "name": "QBO_ADVANCED",
+                "description": "QuickBooks Online Advanced",
+                "eoc": null,
+                "feature": [
+                    {
+                        "type": "Optional Feature",
+                        "code": "SALESFORCE",
+                        "name": "Salesforce Connection",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Feature Set",
+                        "code": "ADVANCED",
+                        "name": "Advanced",
+                        "variant": null,
+                        "trialType": null
+                    }
+                ],
+                "featureSets": []
+            },
+            "optionalFeatures": [],
+            "charge": [
+                {
+                    "chargeID": "23023735",
+                    "name": "QuickBooks Online Advanced",
+                    "description": "QuickBooks QBO_ADVANCED US 200 USD Recurring Monthly Small Biz Direct",
+                    "type": "Recurring",
+                    "featureCode": null,
+                    "featureSetCode": "QBO_ADVANCED",
+                    "tierType": null,
+                    "tierBasis": null,
+                    "tiers": [],
+                    "price": 200,
+                    "discountAmount": 30,
+                    "priceAfterDiscount": 170,
+                    "frequency": "Monthly",
+                    "resource": null,
+                    "resources": [],
+                    "discount": [
+                        {
+                            "discountID": "24003460",
+                            "description": "QuickBooks Online 15 Percent Discount",
+                            "valueType": "Percent",
+                            "value": 15,
+                            "unit": "MONTHS",
+                            "duration": 12,
+                            "percentSaved": 15,
+                            "discountType": null,
+                            "discountStartDate": null,
+                            "discountEndDate": null
+                        }
+                    ],
+                    "strikethroughPrice": 200,
+                    "percentSavedOnListPrice": null,
+                    "appliedRates": [
+                        {
+                            "prices": [
+                                {
+                                    "price": {
+                                        "strikethroughValue": 200,
+                                        "percentSaved": 0,
+                                        "value": 200,
+                                        "discountValue": 30,
+                                        "valueAfterDiscount": 170,
+                                        "maxCap": null
+                                    },
+                                    "priceType": "FIXED",
+                                    "tierType": null,
+                                    "tierBasis": null,
+                                    "tiers": [],
+                                    "discounts": [
+                                        {
+                                            "discountID": "24003460",
+                                            "description": "QuickBooks Online 15 Percent Discount",
+                                            "valueType": "Percent",
+                                            "value": 15,
+                                            "unit": "MONTHS",
+                                            "duration": 12,
+                                            "percentSaved": 15,
+                                            "discountType": null,
+                                            "discountStartDate": null,
+                                            "discountEndDate": null
+                                        }
+                                    ]
+                                }
+                            ],
+                            "condition": null
+                        }
+                    ]
+                }
+            ]
+        }, // 200
+        {
+            "code": "PAYROLL",
+            "name": "QuickBooks Online Payroll",
+            "description": "QuickBooks Online Payroll",
+            "dependentOnProductCode": null,
+            "grantOfferingType": "Intuit.ems.iop",
+            "licensingSystem": "OBILL",
+            "exclusionProductCodes": [
+                "TSHEETS"
+            ],
+            "wholesaleSupport": "Y",
+            "featureSet": {
+                "code": "PR_PREMIUM",
+                "name": "PR_PREMIUM",
+                "description": "QuickBooks Online Payroll Premium",
+                "eoc": null,
+                "feature": [
+                    {
+                        "type": "Optional Feature",
+                        "code": "REACTIVATIONS",
+                        "name": "Reactivations",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "AMENDMENTS_SOCIAL_SECURITY",
+                        "name": "Amendments - Social Security Number",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Feature Set",
+                        "code": "PR_PREMIUM",
+                        "name": "Premium",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "CANCELLATION",
+                        "name": "Cancellations",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "AMENDMENTS_WAGE_TAX",
+                        "name": "Amendments - Wage and Tax",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "TAX_NOTICES",
+                        "name": "Tax Notices",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "PAYROLL_STATE_PASSTHROUGH",
+                        "name": "PAYROLL STATE PASSTHROUGH",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "CORRECTIONS",
+                        "name": "Corrections",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "PAYROLL_STATETAX_REGISTRATION",
+                        "name": "PAYROLL STATETAX REGISTRATION",
+                        "variant": null,
+                        "trialType": null
+                    },
+                    {
+                        "type": "Optional Feature",
+                        "code": "ENTITY",
+                        "name": "Entity Change",
+                        "variant": null,
+                        "trialType": null
+                    }
+                ],
+                "featureSets": [
+                    {
+                        "code": "QB_TSHEETS_PREMIUM",
+                        "name": "QB_TSHEETS_PREMIUM",
+                        "description": "QuickBooks TSheets Premium",
+                        "eoc": null,
+                        "feature": [
+                            {
+                                "type": "Feature Set",
+                                "code": "QB_TSHEETS_PREMIUM",
+                                "name": "Premium",
+                                "variant": null,
+                                "trialType": null
+                            }
+                        ],
+                        "featureSets": null
+                    }
+                ]
+            },
+            "optionalFeatures": [],
+            "charge": [
+                {
+                    "chargeID": "23023757",
+                    "name": "QuickBooks Online Payroll Premium",
+                    "description": "QuickBooks Payroll PR_PREMIUM US 75 USD Recurring Monthly Small Biz Direct",
+                    "type": "Recurring",
+                    "featureCode": null,
+                    "featureSetCode": "PR_PREMIUM",
+                    "tierType": null,
+                    "tierBasis": null,
+                    "tiers": [],
+                    "price": 75,
+                    "discountAmount": 11.25,
+                    "priceAfterDiscount": 63.75,
+                    "frequency": "Monthly",
+                    "resource": null,
+                    "resources": [],
+                    "discount": [
+                        {
+                            "discountID": "24003986",
+                            "description": "QuickBooks US Online Payroll 15 Percent Discount",
+                            "valueType": "Percent",
+                            "value": 15,
+                            "unit": "MONTHS",
+                            "duration": 12,
+                            "percentSaved": 15,
+                            "discountType": null,
+                            "discountStartDate": null,
+                            "discountEndDate": null
+                        }
+                    ],
+                    "strikethroughPrice": 75,
+                    "percentSavedOnListPrice": null,
+                    "appliedRates": [
+                        {
+                            "prices": [
+                                {
+                                    "price": {
+                                        "strikethroughValue": 75,
+                                        "percentSaved": 0,
+                                        "value": 75,
+                                        "discountValue": 11.25,
+                                        "valueAfterDiscount": 63.75,
+                                        "maxCap": null
+                                    },
+                                    "priceType": "FIXED",
+                                    "tierType": null,
+                                    "tierBasis": null,
+                                    "tiers": [],
+                                    "discounts": [
+                                        {
+                                            "discountID": "24003986",
+                                            "description": "QuickBooks US Online Payroll 15 Percent Discount",
+                                            "valueType": "Percent",
+                                            "value": 15,
+                                            "unit": "MONTHS",
+                                            "duration": 12,
+                                            "percentSaved": 15,
+                                            "discountType": null,
+                                            "discountStartDate": null,
+                                            "discountEndDate": null
+                                        }
+                                    ]
+                                }
+                            ],
+                            "condition": null
+                        }
+                    ]
+                }, // 63
+                {
+                    "chargeID": "23023759",
+                    "name": "Payroll Premium Worker Charge",
+                    "description": "QuickBooks Payroll PR_PREMIUM US Tier USD Recurring Monthly Small Biz Direct",
+                    "type": "RecurringPerResource",
+                    "featureCode": null,
+                    "featureSetCode": "PR_PREMIUM",
+                    "tierType": "Step",
+                    "tierBasis": null,
+                    "tiers": [
+                        {
+                            "stepMin": 1,
+                            "stepMax": 99999,
+                            "isDefault": null,
+                            "label": null,
+                            "resourceAttributes": null,
+                            "tierPrices": [
+                                {
+                                    "price": 8,
+                                    "discountAmount": 0,
+                                    "priceAfterDiscount": 8,
+                                    "strikethroughPrice": 8,
+                                    "percentSaved": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "price": 8,
+                    "discountAmount": 0,
+                    "priceAfterDiscount": 8,
+                    "frequency": "Monthly",
+                    "resource": {
+                        "code": "PAW",
+                        "name": "Payroll Active Worker",
+                        "limit": null,
+                        "type": null,
+                        "unitSize": 0,
+                        "unitType": null,
+                        "unitOfMeasure": null,
+                        "multiplier": null,
+                        "granted": false,
+                        "validity": null
+                    },
+                    "resources": [],
+                    "discount": [],
+                    "strikethroughPrice": 8,
+                    "percentSavedOnListPrice": null,
+                    "appliedRates": [
+                        {
+                            "prices": [
+                                {
+                                    "price": {
+                                        "strikethroughValue": 8,
+                                        "percentSaved": 0,
+                                        "value": 8,
+                                        "discountValue": 0,
+                                        "valueAfterDiscount": 8,
+                                        "maxCap": null
+                                    },
+                                    "priceType": "FIXED",
+                                    "tierType": "Step",
+                                    "tierBasis": null,
+                                    "tiers": [
+                                        {
+                                            "stepMin": 1,
+                                            "stepMax": 99999,
+                                            "isDefault": null,
+                                            "label": null,
+                                            "resourceAttributes": [],
+                                            "tierPrices": [
+                                                {
+                                                    "strikethroughValue": 8,
+                                                    "percentSaved": 0,
+                                                    "value": 8,
+                                                    "discountValue": 0,
+                                                    "valueAfterDiscount": 8,
+                                                    "maxCap": null
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "discounts": []
+                                }
+                            ],
+                            "condition": null
+                        }
+                    ]
+                }, // 0
+                {
+                    "chargeID": "23023761",
+                    "name": "Multistate",
+                    "description": "QuickBooks Payroll PR_PREMIUM US Tier USD Recurring Monthly Small Biz Direct",
+                    "type": "RecurringPerResource",
+                    "featureCode": null,
+                    "featureSetCode": "PR_PREMIUM",
+                    "tierType": "Step",
+                    "tierBasis": null,
+                    "tiers": [
+                        {
+                            "stepMin": 1,
+                            "stepMax": 1,
+                            "isDefault": null,
+                            "label": null,
+                            "resourceAttributes": null,
+                            "tierPrices": [
+                                {
+                                    "price": 0,
+                                    "discountAmount": 0,
+                                    "priceAfterDiscount": 0,
+                                    "strikethroughPrice": 0,
+                                    "percentSaved": 0
+                                }
+                            ]
+                        },
+                        {
+                            "stepMin": 2,
+                            "stepMax": 99999,
+                            "isDefault": null,
+                            "label": null,
+                            "resourceAttributes": null,
+                            "tierPrices": [
+                                {
+                                    "price": 12,
+                                    "discountAmount": 0,
+                                    "priceAfterDiscount": 12,
+                                    "strikethroughPrice": 12,
+                                    "percentSaved": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "price": 0,
+                    "discountAmount": 0,
+                    "priceAfterDiscount": 0,
+                    "frequency": "Monthly",
+                    "resource": {
+                        "code": "PMS",
+                        "name": "Payroll Multi State",
+                        "limit": null,
+                        "type": null,
+                        "unitSize": 0,
+                        "unitType": null,
+                        "unitOfMeasure": null,
+                        "multiplier": null,
+                        "granted": false,
+                        "validity": null
+                    },
+                    "resources": [],
+                    "discount": [],
+                    "strikethroughPrice": 0,
+                    "percentSavedOnListPrice": null,
+                    "appliedRates": [
+                        {
+                            "prices": [
+                                {
+                                    "price": {
+                                        "strikethroughValue": 0,
+                                        "percentSaved": 0,
+                                        "value": 0,
+                                        "discountValue": 0,
+                                        "valueAfterDiscount": 0,
+                                        "maxCap": null
+                                    },
+                                    "priceType": "FIXED",
+                                    "tierType": "Step",
+                                    "tierBasis": null,
+                                    "tiers": [
+                                        {
+                                            "stepMin": 1,
+                                            "stepMax": 1,
+                                            "isDefault": null,
+                                            "label": null,
+                                            "resourceAttributes": [],
+                                            "tierPrices": [
+                                                {
+                                                    "strikethroughValue": 0,
+                                                    "percentSaved": 0,
+                                                    "value": 0,
+                                                    "discountValue": 0,
+                                                    "valueAfterDiscount": 0,
+                                                    "maxCap": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "stepMin": 2,
+                                            "stepMax": 99999,
+                                            "isDefault": null,
+                                            "label": null,
+                                            "resourceAttributes": [],
+                                            "tierPrices": [
+                                                {
+                                                    "strikethroughValue": 12,
+                                                    "percentSaved": 0,
+                                                    "value": 12,
+                                                    "discountValue": 0,
+                                                    "valueAfterDiscount": 12,
+                                                    "maxCap": null
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "discounts": []
+                                }
+                            ],
+                            "condition": null
+                        }
+                    ]
+                } // 12 per resource
+            ]
+        } // 63
+    ],
+    "transition": [
+        {
+            "transitionType": "CANCEL",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053366,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "CANCEL",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053383,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "CHANGE_BILLING_FREQUENCY",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053490,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053513,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053514,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053503,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053505,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053502,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053515,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053506,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053369,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053363,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053360,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053389,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "DOWNGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 23000443,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "MIGRATE_IN",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053341,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "MIGRATE_IN",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053345,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "RESUBSCRIBE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053383,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "RESUBSCRIBE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053366,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "UNBUNDLE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053366,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "UNBUNDLE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053383,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "UPGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053568,
+            "isTargeted": "N",
+            "transitionPriority": 1,
+            "toOfferPriority": 8,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "UPGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20025242,
+            "isTargeted": "N",
+            "transitionPriority": 1,
+            "toOfferPriority": 8,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "UPGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053511,
+            "isTargeted": "N",
+            "transitionPriority": 8,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "UPGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053467,
+            "isTargeted": "N",
+            "transitionPriority": 9,
+            "toOfferPriority": 8,
+            "toOfferPricingCategory": null
+        },
+        {
+            "transitionType": "UPGRADE",
+            "fromOfferID": 20025241,
+            "toOfferID": 20053384,
+            "isTargeted": "N",
+            "transitionPriority": 10,
+            "toOfferPriority": 10,
+            "toOfferPricingCategory": null
+        }
+    ],
+    "attributeGroups": [],
+    "addOnOfferIDs": [
+        "20005704",
+        "20014134",
+        "20015538",
+        "20015539",
+        "20015941",
+        "20018806",
+        "20021981",
+        "20021983",
+        "20021985",
+        "20022927",
+        "20022928",
+        "20022934",
+        "20022935",
+        "20022936",
+        "20023892",
+        "20023897",
+        "20023898",
+        "20024948",
+        "20024949",
+        "20024950",
+        "20024951",
+        "20024952",
+        "20024953",
+        "20026550",
+        "20026784",
+        "20026929",
+        "20026974",
+        "20026975",
+        "20026976",
+        "20026980",
+        "20026981",
+        "20026982",
+        "20026986",
+        "20026987",
+        "20026988",
+        "20026989",
+        "20026993",
+        "20026994",
+        "20026995",
+        "20026996",
+        "20027043",
+        "20027044",
+        "20027066",
+        "20027067",
+        "20027068",
+        "20027069",
+        "20027075",
+        "20054469",
+        "20054470",
+        "20054471",
+        "20054491",
+        "20054986",
+        "30014470",
+        "30014471",
+        "30014474",
+        "30014475",
+        "30014519",
+        "30015386"
+    ],
+    "optionalFeatureOfferIDs": [
+        "20052659",
+        "20052658",
+        "20052661",
+        "20052660",
+        "20020519",
+        "20052663",
+        "20052662",
+        "20020521",
+        "20020520"
+    ],
+    "productExclusions": [
+        {
+            "product": "IESTS",
+            "featureSets": {
+                "featureSet": [
+                    "ANY"
+                ]
+            }
+        },
+        {
+            "product": "IESME",
+            "featureSets": {
+                "featureSet": [
+                    "ANY"
+                ]
+            }
+        }
+    ],
+    "pricingSegments": []
+}
