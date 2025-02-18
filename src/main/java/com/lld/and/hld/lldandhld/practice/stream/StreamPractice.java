@@ -72,6 +72,8 @@ public class StreamPractice {
         // employee.name));
         // System.out.println(map);
 
+        listOfEmployees.stream().collect(Collectors.toMap((employee) -> employee.id, employee -> employee));
+
         // Double amount = list.stream().map(employee -> employee.salary).reduce(0D, (a,
         // b) -> a + b);
         // System.out.println("Amount=" + amount);
