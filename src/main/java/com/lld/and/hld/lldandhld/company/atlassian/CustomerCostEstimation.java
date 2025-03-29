@@ -1,4 +1,4 @@
-package com.lld.and.hld.lldandhld.practice.stream;
+package com.lld.and.hld.lldandhld.company.atlassian;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
