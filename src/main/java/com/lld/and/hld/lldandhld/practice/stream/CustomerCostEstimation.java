@@ -1,13 +1,14 @@
 package com.lld.and.hld.lldandhld.practice.stream;
 
-import java.math.BigDecimal;
-import java.security.Timestamp;
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,45 +17,23 @@ import lombok.Data;
 // #   monthlyCostList(): Array/List of size 12 filled with cost incurred in each month of the unit year
 // #   annualCost(): Total cost in a unit year
 
-// #   customer -> subscribe to multi products (JIRA)
-
-// #     JIRA:
-    
-// # - Product:
-// #     - multiple Offers : basic, essential, advanced
-// #         - chargeInformation: $100, $150, $400
-
-// # - offer
-// # {
-// #     id: "1",
-// #     name: "JIRA Basic",
-// #     description: "some text",
-// #     productCode: "JIRA_BASIC",
-// #     "chargeInformation": {
-// #         total: 100,
-// #         durationUnit: "Monthly"
-// #     }
-// # }
-
 // # customer_order:
 // # {
-// #     id: 1434,
-// #     customerId: 123,
-// #     offerId: 1,
-// #     productCode: "JIRA_BASIC",
-// #     dateOfPurchase: timestamp
+// int id;
+// int custId;
+// String code;
+// float value;
+// String durationUnit;
+// long dateOfPurchase;
 // # }
 
-// # Jan - Dec
 
-// # - monthlyCostList() -> {{cost, Month}, 0, 0, {100, April}, ..... {100, Dec}} => 900
-// # - annualCost() -> 900
-    
 @Data
 @AllArgsConstructor
 class Order {
     int id;
-    String code; 
+    int custId;
+    String code;
     float value;
     String durationUnit;
     long dateOfPurchase;
@@ -62,114 +41,148 @@ class Order {
 
 public class CustomerCostEstimation {
 
-    public static Float annualCost(Order order) {
-        if (order == null) {
+    public static Map<String, Float> annualCost(List<Order> orders, int custId) {
+
+        if (orders == null || orders.isEmpty())
             return null;
-        }
-        
-        Float annualValue = 0.0f;
 
-        long dateOfPurchase = order.getDateOfPurchase();
-        float value = order.getValue();
-        Date date = new Date(dateOfPurchase);
+        Map<String, Float> resultMap = new HashMap<>();
 
-        int year = date.getYear();
-        int currentYear = new Date(System.currentTimeMillis()).getYear();
-        
-        if (year > currentYear) {
-            return 0.0f;
-        } else if (year < currentYear) {
-            return 12 * value;
-        }
+        for (Order order : orders) {
 
-        int month = date.getMonth();
-
-        for (int i = month; i <= 11; i++) {
-            annualValue += value;
-        }
-        return annualValue;
-    }
-
-    public static Map<Integer, Float> monthlyCostList(Order order) {
-        if (order == null) {
-            return null;
-        }
-        Map<Integer, Float> resultMap = new HashMap<>();
-        
-        long dateOfPurchase = order.getDateOfPurchase();
-        float value = order.getValue();
-
-        Date date = new Date(dateOfPurchase);
-
-        int year = date.getYear();
-        int month = date.getMonth();
-
-        int currentYear = new Date(System.currentTimeMillis()).getYear();
-        
-        System.out.println("year=" + year +  " currentYear="+currentYear);
-
-        if (year < currentYear) {
-
-            for (int i = 1; i <= 12; i++) {
-                resultMap.put(i, value);
+            if (order.getCustId() != custId) {
+                continue;
             }
-            return resultMap;
 
-        } else if (year > currentYear) {
+            long dateOfPurchase = order.getDateOfPurchase();
+            Timestamp dopInTimestamp = new Timestamp(dateOfPurchase);
 
-            for (int i = 1; i <= 12; i++) {
-                resultMap.put(i, 0.0f);
+            int dopYear = dopInTimestamp.getYear();
+            int dopMonth = dopInTimestamp.getMonth();
+
+            float monthlyPriceOfTheProduct = order.getValue();
+
+            Timestamp today = new Timestamp(System.currentTimeMillis());
+            int currentYear = today.getYear();
+
+            if (dopYear > currentYear) {
+                resultMap.put(order.getCode(), 0.0f);
+                continue;
             }
-            return resultMap;
-        }
 
-        
-        System.out.println("Month=" + month);
+            if (dopYear < currentYear) {
+                resultMap.put(order.getCode(), monthlyPriceOfTheProduct * 12);
+                continue;
+            }
 
-        for (int i = 1; i <= month; i++) {
-            resultMap.put(i, 0.0f);
-        }
+            // System.out.println("dopMonth=" + dopMonth);
 
-        for (int i = month + 1; i <= 12; i++) {
-            resultMap.put(i, value);
+            resultMap.put(order.getCode(), (12 - dopMonth) * monthlyPriceOfTheProduct);
         }
         return resultMap;
     }
 
+    public static Map<String, Float[]> monthlyCostList(List<Order> orders, int custId) {
+        if (orders == null || orders.isEmpty())
+            return null;
+
+        Map<String, Float[]> resultMap = new HashMap<>();
+
+        for (Order order : orders) {
+
+            if (order.getCustId() != custId) {
+                continue;
+            }
+
+            Float[] orderResult = new Float[12];
+            Arrays.fill(orderResult, 0.0f);
+
+            long dateOfPurchase = order.getDateOfPurchase();
+            Timestamp dopInTimestamp = new Timestamp(dateOfPurchase);
+
+            int dopYear = dopInTimestamp.getYear();
+            int dopMonth = dopInTimestamp.getMonth();
+
+            float monthlyPriceOfTheProduct = order.getValue();
+
+            Timestamp today = new Timestamp(System.currentTimeMillis());
+            int currentYear = today.getYear();
+
+            // System.out.println("currentYear=" + currentYear);
+
+            if (dopYear > currentYear) {
+                resultMap.put(order.getCode(), orderResult);
+                continue;
+            }
+
+            if (dopYear < currentYear) {
+                Arrays.fill(orderResult, monthlyPriceOfTheProduct);
+                resultMap.put(order.getCode(), orderResult);
+                continue;
+            }
+
+            // System.out.println("dopMonth=" + dopMonth);
+
+            for (int i = dopMonth + 1; i < 12; i++) {
+                orderResult[i] = monthlyPriceOfTheProduct;
+            }
+
+            resultMap.put(order.getCode(), orderResult);
+        }
+        return resultMap;
+    }
 
     public static void main(String[] args) {
-        Order order = new Order(1, "JIRA_BASIC", 100, "Monthly", System.currentTimeMillis());
-        
-        System.out.println("monthlyCostList=" + monthlyCostList(order));
-        System.out.println("annualCost=" + annualCost(order));
-        System.out.println("\n\n");
 
-        String dateString = "2024-09-21 10:00:00"; // Example date string
-        
+        List<Order> orders = new ArrayList<>();
+        orders.addAll(
+                Arrays.asList(
+                        new Order(1, 1, "JIRA_BASIC", 100, "Monthly", System.currentTimeMillis()),
+                        new Order(2, 1, "CONFLUENCE", 200, "Monthly", System.currentTimeMillis())));
+
+        Map<String, Float[]> monthlyCostList = monthlyCostList(orders, 1);
+
+        System.out.println("Monthly cost");
+        for (Entry<String, Float[]> entry : monthlyCostList.entrySet())
+            System.out.println(entry.getKey() + " " + Arrays.toString(entry.getValue()));
+
+        System.out.println("\nannualCost=" + annualCost(orders, 1));
+        System.out.println("\n");
+
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
         try {
+
+            String dateString = "2024-09-21 10:00:00";
             java.util.Date date = sdf.parse(dateString);
             long millis = date.getTime();
 
-            Order order2 = new Order(1, "JIRA_BASIC", 100, "Monthly", millis);
+            orders.add(new Order(1, 1, "BITBUCKET", 150, "Monthly", millis));
 
-            System.out.println("monthlyCostList=" + monthlyCostList(order2));
-            System.out.println("annualCost=" + annualCost(order2));
+            monthlyCostList = monthlyCostList(orders, 1);
+            System.out.println("Monthly cost");
+            for (Entry<String, Float[]> entry : monthlyCostList.entrySet())
+                System.out.println(entry.getKey() + " " + Arrays.toString(entry.getValue()));
 
-            System.out.println("\n\n");
-            
-            dateString = "2026-09-21 10:00:00"; // Example date string
+            System.out.println("\nannualCost=" + annualCost(orders, 1));
+            System.out.println("\n");
+
+            dateString = "2026-09-21 10:00:00";
             date = sdf.parse(dateString);
             millis = date.getTime();
 
-            order2 = new Order(1, "JIRA_BASIC", 100, "Monthly", millis);
+            orders.add(new Order(1, 1, "WIKI", 300, "Monthly", millis));
 
-            System.out.println("monthlyCostList=" + monthlyCostList(order2));
-            System.out.println("annualCost=" + annualCost(order2));
+            monthlyCostList = monthlyCostList(orders, 1);
+            System.out.println("Monthly cost");
+            for (Entry<String, Float[]> entry : monthlyCostList.entrySet())
+                System.out.println(entry.getKey() + " " + Arrays.toString(entry.getValue()));
+
+            System.out.println("\nannualCost=" + annualCost(orders, 1));
+            System.out.println("\n");
 
         } catch (ParseException e) {
             System.err.println("Error parsing date: " + e.getMessage());
         }
-
-    }    
+    }
 }
