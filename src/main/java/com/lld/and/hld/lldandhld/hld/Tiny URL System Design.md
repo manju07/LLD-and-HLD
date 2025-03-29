@@ -83,7 +83,7 @@ unique-id-generator:
         Samples:
             1-5-fsdf3-435f-345f-545 --> hex
 
-        1 bit -> Z^1 = 2 = [0-1]
+        1 bit -> 2^1 = 2 = [0-1]
         3 bits -> 2^3 = 8 = [0-7]
         16 bytes -> 2^16 = 65,536 = [0-65,535]
 

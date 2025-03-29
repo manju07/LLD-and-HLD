@@ -9,7 +9,7 @@ Types:
 
 
 - Isolation (https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
-    - Phenomenas:
+    - Phenomenas/Scenarios:
         - Dirty-read: Read uncommitted data.
             - T1 updated row but not committed.
             - T2 read data which is not committed.
@@ -21,7 +21,7 @@ Types:
             - C1 - T2 - update data - Y 
             - C2 - T1 - read data - different value - Y
 
-        - Phantom read: Phantom read occures when 2 same queries executed with different results.
+        - Phantom read: Phantom read occures when 2 same queries executed and get different results.
             - T1 - execute query, get some result
             - T2 - generate some data which match results of T1 query
             - T2 - execute query, get result of T2
@@ -31,8 +31,6 @@ Types:
         - Read-Committed: avoid dirty read, hold lock on read / write row for updating or deleting.
         - Repeatable-Read: avoid non-repeatable read, hold locks on all read / write rows for updating or deleting.
         - Serializable: highest isolation level. concurrently executings make them to execute serially or sequentially.
-    
-    
 
 
 

@@ -77,13 +77,13 @@ public class StreamNewTest {
             System.out.println();
         }
 
-        List<Double> collect = listOfListDoubles.stream().flatMap(list -> list.stream().flatMap(Stream::of))
+        List<Double> collect = listOfListDoubles.stream().flatMap(list -> list.stream().flatMap(data -> Stream.of(data)))
                 .collect(Collectors.toList());
         System.out.println("FlatMap = "
                 + collect);
 
         double[] doubleArr = listOfListDoubles.stream().flatMap(list -> list.stream().flatMap(data -> Stream.of(data)))
-                .mapToDouble(Double::doubleValue).toArray();
+                .mapToDouble(data -> Double.valueOf(data)).toArray();
         System.out.print("DoubleArr = ");
         for (int i = 0; i < doubleArr.length; i++) {
             System.out.print(doubleArr[i] + " ");
@@ -99,9 +99,11 @@ public class StreamNewTest {
         List<Employee> listOfEmployees = new ArrayList<Employee>();
         addEntriesToListOfEmployees(listOfEmployees);
 
-        System.out.println("\n\nGrouping by Dept " + listOfEmployees.stream().collect(
+        TreeMap<String, List<Integer>> collect2 = listOfEmployees.stream().collect(
                 Collectors.groupingBy(Employee::getDept, () -> new TreeMap<>(),
-                        Collectors.mapping(Employee::getId, Collectors.toList()))));
+                        Collectors.mapping(Employee::getId, Collectors.toList())));
+                        
+        System.out.println("\n\nGrouping by Dept " + collect2);
 
         System.out.println("\n\nPartitioning = " +
                 Stream

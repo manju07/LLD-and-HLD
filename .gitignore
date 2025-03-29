@@ -76,3 +76,4 @@ build/
 .mvn
 .settings
 ../.vscode
+.qodo

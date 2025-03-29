@@ -138,7 +138,7 @@ public class StreamPractice {
         unsortMap.put("m", 2);
         unsortMap.put("f", 9);
 
-        System.out.println("sort by keys resultMap=" + unsortMap.entrySet().stream().sorted(Map.Entry.comparingByKey())
+        System.out.println("sort by keys resultMap=" + unsortMap.entrySet().stream().sorted(Map.Entry.comparingByValue())
                 .collect(Collectors.toMap(data -> data.getKey(), data -> data.getValue(), (oldValue, newValue) -> newValue,
                         () -> new LinkedHashMap<>())));
 
